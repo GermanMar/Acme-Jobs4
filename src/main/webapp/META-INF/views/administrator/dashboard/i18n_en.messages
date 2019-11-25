@@ -1,0 +1,25 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.company = DashBoard
+
+administrator.dashboard.form.totalAnnounencents = Total Announcements
+administrator.dashboard.form.totalInvestor = Total Investor Records
+administrator.dashboard.form.totalCompany = Total Company Records
+administrator.dashboard.form.title.application-status = Dashboard Chart
+
+administrator.dashboard.form.minimumRequest = Minimum Request
+administrator.dashboard.form.maximumRequest = Maximum Request
+administrator.dashboard.form.averageRequest = Average Request
+administrator.dashboard.form.desviationRequest = Standard deviation Request
+administrator.dashboard.form.minimumOffers = Minimum Offers
+administrator.dashboard.form.maximumOffers = Maximum Offers
+administrator.dashboard.form.averageOffers = Average Offers
+administrator.dashboard.form.desviationOffers = Standard deviation Offers
