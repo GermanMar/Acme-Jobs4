@@ -71,7 +71,13 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/" />
 			<acme:menu-suboption code="master.menu.consumer.create-offer" action="/consumer/offer/create" />
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
+			<acme:menu-suboption code="master.menu.employer.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list"/>
+		</acme:menu-option>
 	</acme:menu-left>
+	
 
 	<acme:menu-right>
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()" />

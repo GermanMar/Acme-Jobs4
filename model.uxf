@@ -513,4 +513,63 @@ Companyrecords
 + stars: Integer {0, 5}</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>203</y>
+      <w>238</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>854</x>
+      <y>280</y>
+      <w>147</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Employer
+--
++ company: String {NotBlank}
++ sector: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1225</x>
+      <y>210</y>
+      <w>301</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Job
+--
++ reference: String {Unique,NotBlank, Length(min=5, max=10)}
++ title: String {NotBlank}
++ deadline: String{NotNull, Temporal(TIMESTAMP)}
++ salary:Money{NotNull, Valid}
++ description:String{NotBlank}
++ moreInfo:String{URL}
++ finalMode: boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>238</y>
+      <w>245</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=1
+m2=0..*
+&lt; Registered By </panel_attributes>
+    <additional_attributes>330.0;10.0;10.0;90.0</additional_attributes>
+  </element>
 </diagram>
