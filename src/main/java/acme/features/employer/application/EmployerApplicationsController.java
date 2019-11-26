@@ -20,7 +20,7 @@ public class EmployerApplicationsController extends AbstractController<Employer,
 	//Internal state
 
 	@Autowired
-	private EmployerApplicationsListService	listServiceMine;
+	private EmployerApplicationsListService	listMineService;
 
 	@Autowired
 	private EmployerApplicationsShowService	showService;
@@ -30,7 +30,7 @@ public class EmployerApplicationsController extends AbstractController<Employer,
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listServiceMine);
+		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
