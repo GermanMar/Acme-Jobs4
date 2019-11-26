@@ -34,7 +34,7 @@ public class EmployerApplicationsListService implements AbstractListService<Empl
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ref", "creationMoment", "job");
+		request.unbind(entity, model, "ref", "creationMoment", "status");
 
 	}
 
