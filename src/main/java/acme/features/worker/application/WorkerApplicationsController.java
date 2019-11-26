@@ -9,22 +9,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.components.CustomCommand;
 import acme.entities.application.Application;
+import acme.entities.roles.Worker;
 import acme.framework.components.BasicCommand;
+import acme.framework.controllers.AbstractController;
 
 @Controller
 @RequestMapping("/worker/application/")
 public class WorkerApplicationsController extends AbstractController<Worker, Application> {
 
 	@Autowired
-	private WorkerApplicationsListService	listMineService;
+	private WorkerApplicationsListMineService	listMineService;
 
 	@Autowired
-	private WorkerApplicationsShowService	showService;
+	private WorkerApplicationsShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(BasicCommand.LIST,CustomCommand.LIST_MINE this.listMineService);
+		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
