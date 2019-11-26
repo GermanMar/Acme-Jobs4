@@ -81,6 +81,12 @@ master.menu.employer = Employer
 master.menu.employer.favourite-link = Favourite link
 master.menu.employer.job.list = Jobs list
 
+# master.menu.worker ####################################################
+
+master.menu.worker = Workers
+master.menu.worker.favourite-link = Favourite link
+master.menu.worker.job.list = Jobs list
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

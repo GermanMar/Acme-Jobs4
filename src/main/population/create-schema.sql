@@ -122,6 +122,7 @@
         `salary_currency` varchar(255),
         `title` varchar(255),
         `employer_id` integer not null,
+        `worker_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -200,6 +201,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `worker` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `qualifications` varchar(255),
+        `skills` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `hibernate_sequence` (
        `next_val` bigint
     ) engine=InnoDB;
@@ -256,6 +266,11 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        foreign key (`employer_id`) 
        references `employer` (`id`);
 
+    alter table `job` 
+       add constraint `FKoy6jryc3ih02h2e54wda7v6r6` 
+       foreign key (`worker_id`) 
+       references `worker` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
@@ -270,3 +285,8 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        add constraint `FK5jb8ulpt52m5bpmunrt22733b` 
        foreign key (`spamlist_id`) 
        references `spamlist` (`id`);
+
+    alter table `worker` 
+       add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
