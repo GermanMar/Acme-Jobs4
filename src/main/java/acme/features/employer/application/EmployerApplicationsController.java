@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.components.CustomCommand;
 import acme.entities.application.Application;
+import acme.entities.roles.Employer;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
@@ -21,7 +22,7 @@ public class EmployerApplicationsController extends AbstractController<Employer,
 	@Autowired
 	private EmployerApplicationsListService	listServiceMine;
 
-	@AutoWired
+	@Autowired
 	private EmployerApplicationsShowService	showService;
 
 
@@ -29,9 +30,8 @@ public class EmployerApplicationsController extends AbstractController<Employer,
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(BasicCommand.LIST, CustomCommand.LIST_MINE, this.listServiceMine);
-		super.addBasicCommand(BasicCommand.LIST, this.showService);
-
+		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listServiceMine);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }
