@@ -76,6 +76,11 @@
 			<acme:menu-suboption code="master.menu.employer.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list_mine"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
+			<acme:menu-suboption code="master.menu.worker.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.worker.job.list" action="/worker/job/list_mine"/>
+		</acme:menu-option>
 	</acme:menu-left>
 	
 

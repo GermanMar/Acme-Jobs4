@@ -119,6 +119,36 @@
 		<property name="userAccount" ref="employer1UserAccount" />
 	</bean>
 	
+	<!-- Workers -->
+	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker1" />
+		<property name="password" value="worker1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="One" />
+				<property name="email" value="Worker1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker1Worker" />
+				<ref bean="worker1Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="worker1Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Sum,Subtract,Multiply,Divide" />
+		<property name="skills" value="Fast reading, Fast writing,Bottle flip challenge" />
+		<property name="userAccount" ref="worker1UserAccount" />
+	</bean>
+
+	<bean id="worker1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker1UserAccount" />
+	</bean>
+	
 	<!-- Jobs -->
 	
 	<bean name="job1" class = "acme.entities.job.Job">
@@ -130,6 +160,7 @@
 		<property name="moreInfo" value="https://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="worker" ref="worker1Worker"/>
 	</bean>
 	
 	<bean name="job2" class = "acme.entities.job.Job">
@@ -141,6 +172,7 @@
 		<property name="moreInfo" value="https://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="worker" ref="worker1Worker"/>
 	</bean>
 
 
