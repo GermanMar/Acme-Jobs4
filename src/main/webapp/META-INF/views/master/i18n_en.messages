@@ -99,6 +99,7 @@ master.menu.investor-record.list = Investor Records list
 master.menu.challenge.challenges-list = Challenges
 master.menu.offer.offer-list = Offers
 master.menu.request.requests-list = Requests
+master.menu.authenticated.job-list = Job List
 
 
 # master.footer ###############################################################

@@ -107,6 +107,8 @@
 			<acme:menu-suboption code="master.menu.offer.offer-list" action="/authenticated/offer/list" />
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.request.requests-list" action="/authenticated/request/list" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.authenticated.job-list" action="/authenticated/job/list" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()" />

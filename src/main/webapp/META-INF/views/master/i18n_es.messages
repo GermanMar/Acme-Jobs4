@@ -94,6 +94,7 @@ master.menu.user-account.become-consumer = Hazte consumidor
 
 master.menu.authenticated = Usuarios
 master.menu.challenge.challenges-list = Desafíos
+master.menu.authenticated.job-list = Lista de Trabajos
 
 # master.menu.offer ####################################################
 
