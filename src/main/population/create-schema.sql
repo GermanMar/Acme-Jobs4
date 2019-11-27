@@ -23,6 +23,20 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `application` (
+       `id` integer not null,
+        `version` integer not null,
+        `creation_moment` datetime(6),
+        `qualification` varchar(255),
+        `ref` varchar(255),
+        `skill` varchar(255),
+        `statement` varchar(255),
+        `status` varchar(255),
+        `job_id` integer not null,
+        `worker_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -215,6 +229,9 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
+    alter table `application` 
+       add constraint UK_sqi7i8b9wxmiu57ftr95ssexh unique (`ref`);
+
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
@@ -244,6 +261,16 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        add constraint FK_6lnbc6fo3om54vugoh8icg78m 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `application` 
+       add constraint `FKoa6p4s2oyy7tf80xwc4r04vh6` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `application` 
+       add constraint `FKmbjdoxi3o93agxosoate4sxbt` 
+       foreign key (`worker_id`) 
+       references `worker` (`id`);
 
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 

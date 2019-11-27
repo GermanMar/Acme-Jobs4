@@ -1,11 +1,13 @@
 
 package acme.entities.job;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -16,6 +18,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.application.Application;
 import acme.entities.roles.Employer;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -30,7 +33,7 @@ public class Job extends DomainEntity {
 	/**
 	 *
 	 */
-	private static final long	serialVersionUID	= 1L;
+	private static final long		serialVersionUID	= 1L;
 
 	//Atributes
 
@@ -38,36 +41,36 @@ public class Job extends DomainEntity {
 	@NotBlank
 	@Length(min = 5, max = 10)
 	@Pattern(regexp = "[A-Z\\d]{4}-[A-Z\\d]{4}")
-	private String				reference;
+	private String					reference;
 
 	@NotBlank
-	private String				title;
+	private String					title;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				deadline;
+	private Date					deadline;
 
 	@NotNull
 	@Valid
-	private Money				salary;
+	private Money					salary;
 
 	@NotBlank
-	private String				description;
+	private String					description;
 
 	@URL
-	private String				moreInfo;
+	private String					moreInfo;
 
-	private boolean				finalMode;
+	private boolean					finalMode;
 
 	//RelationShips
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Employer			employer;
+	private Employer				employer;
 
-	//	@NotNull
-	//	@Valid
-	//	@OneToMany(mappedBy = "job")
-	//	private Collection<Application>	application;
+	@NotNull
+	@Valid
+	@OneToMany(mappedBy = "job")
+	private Collection<Application>	application;
 
 }
