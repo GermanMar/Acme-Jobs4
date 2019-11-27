@@ -79,13 +79,15 @@ master.menu.consumer.create-offer = Create Offer
 
 master.menu.employer = Employer
 master.menu.employer.favourite-link = Favourite link
-master.menu.employer.job.list = Jobs list
+master.menu.employer.job.list = My jobs list
+master.menu.employer.application.list = My applications list
 
 # master.menu.worker ####################################################
 
 master.menu.worker = Workers
 master.menu.worker.favourite-link = Favourite link
-master.menu.worker.job.list = Jobs list
+master.menu.worker.job.list = My jobs list
+master.menu.worker.application.list = My applications list
 
 # master.menu.user-account ####################################################
 

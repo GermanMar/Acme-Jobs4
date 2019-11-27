@@ -77,15 +77,17 @@ master.menu.consumer.create-offer = Crear ofertas
 
 # master.menu.employer ####################################################
 
-master.menu.employer = Empleados
+master.menu.employer = Empleador
 master.menu.employer.favourite-link = Link favorito
-master.menu.employer.job.list = Lista de trabajos
+master.menu.employer.job.list = Lista de mis trabajos
+master.menu.employer.application.list = Lista de mis aplicaciones
 
 # master.menu.worker ####################################################
 
 master.menu.worker = Trabajadores
 master.menu.worker.favourite-link = Link favorito
-master.menu.worker.job.list = Lista de trabajos
+master.menu.worker.job.list = Lista de mis trabajos
+master.menu.worker.application.list = Lista de mis trabajos
 
 # master.menu.user-account ####################################################
 
