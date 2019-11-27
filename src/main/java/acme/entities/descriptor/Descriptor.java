@@ -1,5 +1,5 @@
 
-package acme.entities.roles;
+package acme.entities.descriptor;
 
 import java.util.Collection;
 
