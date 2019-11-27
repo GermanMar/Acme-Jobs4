@@ -122,7 +122,6 @@
         `salary_currency` varchar(255),
         `title` varchar(255),
         `employer_id` integer not null,
-        `worker_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -265,11 +264,6 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
-
-    alter table `job` 
-       add constraint `FKoy6jryc3ih02h2e54wda7v6r6` 
-       foreign key (`worker_id`) 
-       references `worker` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

@@ -23,10 +23,6 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
-    alter table `job` 
-       drop 
-       foreign key `FKoy6jryc3ih02h2e54wda7v6r6`;
-
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;

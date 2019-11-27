@@ -160,7 +160,6 @@
 		<property name="moreInfo" value="https://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
-		<property name="worker" ref="worker1Worker"/>
 	</bean>
 	
 	<bean name="job2" class = "acme.entities.job.Job">
@@ -172,7 +171,6 @@
 		<property name="moreInfo" value="https://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
-		<property name="worker" ref="worker1Worker"/>
 	</bean>
 
 
