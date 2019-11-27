@@ -91,6 +91,24 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `descriptor` (
+       `id` integer not null,
+        `version` integer not null,
+        `description` varchar(255),
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `duty` (
+       `id` integer not null,
+        `version` integer not null,
+        `days_to_complete` integer,
+        `description` varchar(255),
+        `title` varchar(255),
+        `descriptor_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `employer` (
        `id` integer not null,
         `version` integer not null,
@@ -215,6 +233,9 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
+    alter table `descriptor` 
+       add constraint UK_4iw18njo4d0q8gvnhe04vmctw unique (`job_id`);
+
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
@@ -254,6 +275,16 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `descriptor` 
+       add constraint `FKgfulfilmwi4hhaquiu7fr5g0g` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `duty` 
+       add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
+       foreign key (`descriptor_id`) 
+       references `descriptor` (`id`);
 
     alter table `employer` 
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 

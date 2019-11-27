@@ -13,8 +13,12 @@ import javax.validation.constraints.NotNull;
 import acme.entities.duty.Duty;
 import acme.entities.job.Job;
 import acme.framework.entities.DomainEntity;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Descriptor extends DomainEntity {
 
 	/**
@@ -29,7 +33,7 @@ public class Descriptor extends DomainEntity {
 
 	@NotNull
 	@Valid
-	@OneToMany(mappedBy = "duty")
+	@OneToMany(mappedBy = "descriptor")
 	private Collection<Duty>	duty;
 
 	//RelationShips
