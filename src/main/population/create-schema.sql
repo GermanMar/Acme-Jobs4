@@ -23,6 +23,20 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `application` (
+       `id` integer not null,
+        `version` integer not null,
+        `creation_moment` datetime(6),
+        `qualification` varchar(255),
+        `ref` varchar(255),
+        `skill` varchar(255),
+        `statement` varchar(255),
+        `status` varchar(255),
+        `job_id` integer not null,
+        `worker_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -122,7 +136,6 @@
         `salary_currency` varchar(255),
         `title` varchar(255),
         `employer_id` integer not null,
-        `worker_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -216,6 +229,9 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
+    alter table `application` 
+       add constraint UK_sqi7i8b9wxmiu57ftr95ssexh unique (`ref`);
+
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
@@ -246,6 +262,16 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `application` 
+       add constraint `FKoa6p4s2oyy7tf80xwc4r04vh6` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `application` 
+       add constraint `FKmbjdoxi3o93agxosoate4sxbt` 
+       foreign key (`worker_id`) 
+       references `worker` (`id`);
+
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
        foreign key (`user_account_id`) 
@@ -265,11 +291,6 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
-
-    alter table `job` 
-       add constraint `FKoy6jryc3ih02h2e54wda7v6r6` 
-       foreign key (`worker_id`) 
-       references `worker` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
