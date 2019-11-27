@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.Length;
 
 import acme.entities.job.Job;
 import acme.entities.roles.Worker;
@@ -31,7 +31,7 @@ public class Application extends DomainEntity {
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "[A-Z]{4}-[A-Z]{4}:[A-Z]{4}") //Min:5 Max:15 EEEE-JJJJ:WWWW
-	@Range(min = 5, max = 15)
+	@Length(min = 5, max = 15)
 	private String				ref;
 
 	@NotNull
