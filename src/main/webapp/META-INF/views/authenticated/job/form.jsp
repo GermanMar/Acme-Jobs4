@@ -12,6 +12,7 @@
 
 <%@page language="java"%>
 
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
@@ -22,13 +23,18 @@
 	<acme:form-money code="employer.offer.form.label.salary" path="salary"/>
 	<acme:form-url code="employer.offer.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="employer.offer.form.label.description" path="description"/>
-	<acme:message code="employer.job.descriptor"/>
+	<h4>Descriptor:</h4>
 	<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor" path="descriptor"/>
 	
-	<acme:form-submit
-	code="authenticated.job.form.button.duty"
-	method = "get"
-	action="/authenticated/duty/list"/>
-						
+	<h4>Duties:</h4>
+	<c:forEach items="${duties}" var="duty">
+	    <li>
+	    	<Strong>Duty:</Strong>
+	    	<p>${duty.getTitle()}</p>
+	    	<p>${duty.getDescription()}</p>
+	    	<p>${duty.getPercent()}</p>
+	    </li>
+	</c:forEach>
+		
 	<acme:form-return code="employer.offer.form.button.return" />
 </acme:form>
