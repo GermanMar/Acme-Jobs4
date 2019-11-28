@@ -149,6 +149,126 @@
 		<property name="userAccount" ref="employer2UserAccount" />
 	</bean>
 	
+	<!-- Employer3 -->
+	<bean name="employer3UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer3" />
+		<property name="password" value="employer3" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer" />
+				<property name="surname" value="Three" />
+				<property name="email" value="employer3@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer3Employer" />
+				<ref bean="employer3Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="employer3Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 3, Inc." />
+		<property name="sector" value="Sector 3" />
+		<property name="userAccount" ref="employer3UserAccount" />
+	</bean>
+
+	<bean id="employer3Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer3UserAccount" />
+	</bean>
+	
+	<!-- Employer4 -->
+	<bean name="employer4UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer4" />
+		<property name="password" value="employer4" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer" />
+				<property name="surname" value="Four" />
+				<property name="email" value="employer4@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer4Employer" />
+				<ref bean="employer4Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="employer4Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 4, Inc." />
+		<property name="sector" value="Sector 4" />
+		<property name="userAccount" ref="employer4UserAccount" />
+	</bean>
+
+	<bean id="employer4Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer4UserAccount" />
+	</bean>
+	
+	<!-- Employer5 -->
+	<bean name="employer5UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer5" />
+		<property name="password" value="employer5" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer" />
+				<property name="surname" value="Five" />
+				<property name="email" value="employer5@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer5Employer" />
+				<ref bean="employer5Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="employer5Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 5, Inc." />
+		<property name="sector" value="Sector 5" />
+		<property name="userAccount" ref="employer5UserAccount" />
+	</bean>
+
+	<bean id="employer5Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer5UserAccount" />
+	</bean>
+	
+	<!-- Employer6 -->
+	<bean name="employer6UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer6" />
+		<property name="password" value="employer6" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer" />
+				<property name="surname" value="Six" />
+				<property name="email" value="employer6@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employer6Employer" />
+				<ref bean="employer6Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="employer6Employer" class="acme.entities.roles.Employer">
+		<property name="company" value="Employer 6, Inc." />
+		<property name="sector" value="Sector 6" />
+		<property name="userAccount" ref="employer6UserAccount" />
+	</bean>
+
+	<bean id="employer6Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employer6UserAccount" />
+	</bean>
+	
 	<!-- Workers -->
 	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="worker1" />
@@ -238,6 +358,96 @@
 
 	<bean id="worker3Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="worker3UserAccount" />
+	</bean>
+	
+	<!-- Workers 4 -->
+	<bean name="worker4UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker4" />
+		<property name="password" value="worker4" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Four" />
+				<property name="email" value="Worker4@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker4Worker" />
+				<ref bean="worker4Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="worker4Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Subtract, Divide" />
+		<property name="skills" value="Fast reading, fast writting" />
+		<property name="userAccount" ref="worker4UserAccount" />
+	</bean>
+
+	<bean id="worker4Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker4UserAccount" />
+	</bean>
+	
+	<!-- Workers 5 -->
+	<bean name="worker5UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker5" />
+		<property name="password" value="worker5" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Five" />
+				<property name="email" value="Worker5@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker5Worker" />
+				<ref bean="worker5Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="worker5Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Multiply, Subtract" />
+		<property name="skills" value="Fast speaking, lidering" />
+		<property name="userAccount" ref="worker5UserAccount" />
+	</bean>
+
+	<bean id="worker5Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker5UserAccount" />
+	</bean>
+	
+	<!-- Workers 6 -->
+	<bean name="worker6UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker6" />
+		<property name="password" value="worker6" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Six" />
+				<property name="email" value="Worker6@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker6Worker" />
+				<ref bean="worker6Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="worker6Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Sum,Subtract,Divide" />
+		<property name="skills" value="Fast spelling, story telling" />
+		<property name="userAccount" ref="worker6UserAccount" />
+	</bean>
+
+	<bean id="worker6Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker6UserAccount" />
 	</bean>
 	
 	<!-- Jobs -->
