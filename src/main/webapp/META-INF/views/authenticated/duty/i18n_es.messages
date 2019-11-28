@@ -1,0 +1,9 @@
+authenticated.job.list.label.title = Titulo
+authenticated.job.list.label.description = Descripción
+authenticated.job.list.label.percent = Porcentaje
+
+authenticated.job.form.label.title = Titulo
+authenticated.job.form.label.description = Descripción
+authenticated.job.form.label.percent = Porcentaje
+
+employer.offer.form.button.return = Volver

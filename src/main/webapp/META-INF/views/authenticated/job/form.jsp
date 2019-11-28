@@ -22,7 +22,13 @@
 	<acme:form-money code="employer.offer.form.label.salary" path="salary"/>
 	<acme:form-url code="employer.offer.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="employer.offer.form.label.description" path="description"/>
+	<acme:message code="employer.job.descriptor"/>
+	<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor" path="descriptor"/>
 	
-
+	<acme:form-submit
+	code="authenticated.job.form.button.duty"
+	method = "get"
+	action="/authenticated/duty/list"/>
+						
 	<acme:form-return code="employer.offer.form.button.return" />
 </acme:form>

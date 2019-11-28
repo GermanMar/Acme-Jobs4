@@ -8,5 +8,9 @@ employer.offer.form.label.deadline = Deadline
 employer.offer.form.label.salary = Salary
 employer.offer.form.label.moreInfo = More Info
 employer.offer.form.label.description = Description
+employer.job.descriptor = Descriptor
+employer.job.form.label.descriptor = Description
+employer.job.duties = Duty
+authenticated.job.form.button.duty = Duties
 
 employer.offer.form.button.return = Return

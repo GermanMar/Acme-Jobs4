@@ -4,6 +4,7 @@ package acme.features.authenticated.job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.descriptor.Descriptor;
 import acme.entities.job.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
@@ -46,6 +47,12 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 
 		request.unbind(entity, model, "reference", "title", "deadline");
 		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
+
+		Descriptor descriptor = entity.getDescriptor();
+
+		model.setAttribute("descriptor", descriptor.getDescription());
+
+		model.setAttribute("jobId", entity.getId());
 
 	}
 
