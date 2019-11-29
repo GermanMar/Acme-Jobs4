@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -19,6 +20,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.entities.application.Application;
+import acme.entities.descriptor.Descriptor;
 import acme.entities.roles.Employer;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -60,6 +62,11 @@ public class Job extends DomainEntity {
 	@URL
 	private String					moreInfo;
 
+	@NotNull
+	@Valid
+	@OneToOne(mappedBy = "job")
+	private Descriptor				descriptor;
+
 	private boolean					finalMode;
 
 	//RelationShips
@@ -72,5 +79,4 @@ public class Job extends DomainEntity {
 	@Valid
 	@OneToMany(mappedBy = "job")
 	private Collection<Application>	application;
-
 }

@@ -12,17 +12,29 @@
 
 <%@page language="java"%>
 
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="false">
-	<acme:form-textbox code="employer.offer.form.label.reference" path="reference" />
-	<acme:form-textbox code="employer.offer.form.label.title" path="title" />
-	<acme:form-moment code="employer.offer.form.label.deadline" path="deadline"/>
-	<acme:form-money code="employer.offer.form.label.salary" path="salary"/>
-	<acme:form-url code="employer.offer.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-textarea code="employer.offer.form.label.description" path="description"/>
+	<acme:form-textbox code="authenticated.job.form.label.reference" path="reference" />
+	<acme:form-textbox code="authenticated.job.form.label.title" path="title" />
+	<acme:form-moment code="authenticated.job.form.label.deadline" path="deadline"/>
+	<acme:form-money code="authenticated.job.form.label.salary" path="salary"/>
+	<acme:form-url code="authenticated.job.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-textarea code="authenticated.job.form.label.description" path="description"/>
+	<h4>Descriptor:</h4>
+	<acme:form-textarea readonly="true" code="authenticated.job.form.label.descriptor" path="descriptor"/>
 	
-
-	<acme:form-return code="employer.offer.form.button.return" />
+	<h4>Duties:</h4>
+	<c:forEach items="${duties}" var="duty">
+	    <li>
+	    	<Strong>Duty:</Strong>
+	    	<p>${duty.getTitle()}</p>
+	    	<p>${duty.getDescription()}</p>
+	    	<p>${duty.getPercent()}</p>
+	    </li>
+	</c:forEach>
+		
+	<acme:form-return code="authenticated.job.form.button.return" />
 </acme:form>

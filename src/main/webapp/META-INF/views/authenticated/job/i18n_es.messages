@@ -1,12 +1,12 @@
-employer.job.list.label.reference = Referencia
-employer.job.list.label.deadline = Fecha de fin
-employer.job.list.label.title = Título
+authenticated.job.list.label.reference = Referencia
+authenticated.job.list.label.deadline = Fecha de fin
+authenticated.job.list.label.title = Título
 
-employer.offer.form.label.reference = Referencia
-employer.offer.form.label.title = Título
-employer.offer.form.label.deadline = Fecha de Fin
-employer.offer.form.label.salary = Salario
-employer.offer.form.label.moreInfo = Más información
-employer.offer.form.label.description = Descripción
+authenticated.job.form.label.reference = Referencia
+authenticated.job.form.label.title = Título
+authenticated.job.form.label.deadline = Fecha de Fin
+authenticated.job.form.label.salary = Salario
+authenticated.job.form.label.moreInfo = Más información
+authenticated.job.form.label.description = Descripción
 
-employer.offer.form.button.return = Volver
+authenticated.job.form.button.return = Volver

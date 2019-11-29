@@ -460,13 +460,14 @@
 		<property name="description" value="Hola que tal"/>
 		<property name="moreInfo" value="https://www.example.com"/>
 		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer2Employer"/>
 		<property name="application">
 			<list>
 			<ref bean="application3"/>
 			<ref bean="application4"/>
 			</list>
 		</property>
+		<property name="descriptor" ref ="descriptor1" />
+		<property name="employer" ref="employer1Employer"/>
 	</bean>
 	
 	<bean name="job2" class = "acme.entities.job.Job">
@@ -477,6 +478,7 @@
 		<property name="description" value="Hola que tal"/>
 		<property name="moreInfo" value="https://www.example.com"/>
 		<property name="finalMode" value="true"/>
+		<property name="descriptor" ref="descriptor2" />
 		<property name="employer" ref="employer1Employer"/>
 		<property name="application">
 			<list>
@@ -626,6 +628,70 @@
 		<property name="job" ref="job4"/>
 		<property name="worker" ref="worker5Worker"/>
 		</bean>
+		
+	<!-- Descriptors -->
+	
+	<bean name="descriptor1" class = "acme.entities.descriptor.Descriptor">
+		<property name="description" value="A simple Description"/>
+		<property name="duty">
+			<list>
+				<ref bean="duty1" />
+				<ref bean="duty2" />
+				<ref bean="duty3" />
+			</list>
+		</property>
+		<property name="job"><ref bean="job1" /></property>
+	</bean>
+	
+	<bean name="descriptor2" class = "acme.entities.descriptor.Descriptor">
+		<property name="description" value="A simple Description"/>
+		<property name="duty">
+			<list>
+				<ref bean="duty4" />
+				<ref bean="duty5" />
+				<ref bean="duty6" />
+			</list>
+		</property>
+		<property name="job"><ref bean="job2" /></property>
+	</bean>
+	
+	<!-- Duties -->
+	<bean id="duty1" class="acme.entities.duty.Duty">
+		<property name="title" value="A Simple Title" />
+		<property name="description" value="A simple Description" />
+		<property name="daysToComplete" value="2" />
+		<property name="descriptor" ref="descriptor1" />
+	</bean>
+	<bean id="duty2" class="acme.entities.duty.Duty">
+		<property name="title" value="A Simple Title" />
+		<property name="description" value="A simple Description" />
+		<property name="daysToComplete" value="5" />
+		<property name="descriptor" ref="descriptor1" />
+	</bean>
+	<bean id="duty3" class="acme.entities.duty.Duty">
+		<property name="title" value="A Simple Title" />
+		<property name="description" value="A simple Description" />
+		<property name="daysToComplete" value="3" />
+		<property name="descriptor" ref="descriptor1" />
+	</bean>
+	<bean id="duty4" class="acme.entities.duty.Duty">
+		<property name="title" value="A Simple Title" />
+		<property name="description" value="A simple Description" />
+		<property name="daysToComplete" value="7" />
+		<property name="descriptor" ref="descriptor2" />
+	</bean>
+	<bean id="duty5" class="acme.entities.duty.Duty">
+		<property name="title" value="A Simple Title" />
+		<property name="description" value="A simple Description" />
+		<property name="daysToComplete" value="5" />
+		<property name="descriptor" ref="descriptor2" />
+	</bean>
+	<bean id="duty6" class="acme.entities.duty.Duty">
+		<property name="title" value="A Simple Title" />
+		<property name="description" value="A simple Description" />
+		<property name="daysToComplete" value="1" />
+		<property name="descriptor" ref="descriptor2" />
+	</bean>
 
 	<!-- Banners -->
 	<bean id="banner01" class="acme.entities.nonCommercial.NonCommercial">

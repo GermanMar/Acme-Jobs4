@@ -9,14 +9,14 @@
 # they accept any liabilities with respect to them.
 
 
-anonymous.investor-record.list.label.invname = Name of an investor
-anonymous.investor-record.list.label.invsector = Work Sector
-anonymous.investor-record.list.label.investingstatement = Investing Statement
-anonymous.investor-record.list.label.starsnumber = Number of Stars
+authenticated.investor-record.list.label.invname = Name of an investor
+authenticated.investor-record.list.label.invsector = Work Sector
+authenticated.investor-record.list.label.investingstatement = Investing Statement
+authenticated.investor-record.list.label.starsnumber = Number of Stars
 
-anonymous.investor-record.form.label.invname = Name of an investor
-anonymous.investor-record.form.label.invsector = Work Sector
-anonymous.investor-record.form.label.investingstatement = Investing Statement
-anonymous.investor-record.form.label.starsnumber = Number of Stars
+authenticated.investor-record.form.label.invname = Name of an investor
+authenticated.investor-record.form.label.invsector = Work Sector
+authenticated.investor-record.form.label.investingstatement = Investing Statement
+authenticated.investor-record.form.label.starsnumber = Number of Stars
 
-anonymous.investor-record.form.button.return = Return
+authenticated.investor-record.form.button.return = Return
