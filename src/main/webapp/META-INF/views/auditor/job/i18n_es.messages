@@ -1,0 +1,12 @@
+auditor.job.list.label.reference = Referencia
+auditor.job.list.label.deadline = Fecha de fin
+auditor.job.list.label.title = Título
+
+auditor.offer.form.label.reference = Referencia
+auditor.offer.form.label.title = Título
+auditor.offer.form.label.deadline = Fecha de Fin
+auditor.offer.form.label.salary = Salario
+auditor.offer.form.label.moreInfo = Más información
+auditor.offer.form.label.description = Descripción
+
+auditor.offer.form.button.return = Volver

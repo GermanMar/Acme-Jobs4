@@ -89,6 +89,13 @@ master.menu.worker.favourite-link = Link favorito
 master.menu.worker.job.list = Lista de mis trabajos
 master.menu.worker.application.list = Lista de mis trabajos
 
+# master.menu.auditor ####################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.favourite-link = Link favorito
+master.menu.auditor.job.list-rec = Mis trabajos documentados
+master.menu.auditor.job.nonrec-list-nonrec = Trabajos no documentados por mi
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

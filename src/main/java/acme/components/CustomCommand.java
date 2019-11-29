@@ -15,5 +15,5 @@ package acme.components;
 import acme.framework.components.Command;
 
 public enum CustomCommand implements Command {
-	ShowDasboard, TOPLIST, LIST_MINE
+	ShowDasboard, TOPLIST, LIST_MINE, LIST_REC, LIST_NONREC
 }
