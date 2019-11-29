@@ -486,9 +486,9 @@
 			<ref bean="application2"/>
 			</list>
 		</property>
-		</bean>
+	</bean>
 		
-		<bean name="job3" class = "acme.entities.job.Job">
+	<bean name="job3" class = "acme.entities.job.Job">
 		<property name="reference" value="EMBR-JOBP"/>
 		<property name="title" value="Title 1"/>
 		<property name="deadline" value="2030/12/11 23:59"/>
@@ -496,6 +496,7 @@
 		<property name="description" value="Hola que tal"/>
 		<property name="moreInfo" value="https://www.example.com"/>
 		<property name="finalMode" value="true"/>
+		<property name="descriptor" ref="descriptor3" />
 		<property name="employer" ref="employer3Employer"/>
 		<property name="application">
 			<list>
@@ -513,6 +514,7 @@
 		<property name="description" value="Hola que tal"/>
 		<property name="moreInfo" value="https://www.example.com"/>
 		<property name="finalMode" value="true"/>
+		<property name="descriptor" ref="descriptor4" />
 		<property name="employer" ref="employer4Employer"/>
 		<property name="application">
 			<list>
@@ -530,6 +532,7 @@
 		<property name="description" value="Hola que tal"/>
 		<property name="moreInfo" value="https://www.example.com"/>
 		<property name="finalMode" value="true"/>
+		<property name="descriptor" ref="descriptor5" />
 		<property name="employer" ref="employer5Employer"/>
 		<property name="application">
 			<list>
@@ -653,6 +656,42 @@
 			</list>
 		</property>
 		<property name="job"><ref bean="job2" /></property>
+	</bean>
+	
+	<bean name="descriptor3" class = "acme.entities.descriptor.Descriptor">
+		<property name="description" value="A simple Description"/>
+		<property name="duty">
+			<list>
+				<ref bean="duty4" />
+				<ref bean="duty5" />
+				<ref bean="duty6" />
+			</list>
+		</property>
+		<property name="job"><ref bean="job3" /></property>
+	</bean>
+	
+	<bean name="descriptor4" class = "acme.entities.descriptor.Descriptor">
+		<property name="description" value="A simple Description"/>
+		<property name="duty">
+			<list>
+				<ref bean="duty4" />
+				<ref bean="duty5" />
+				<ref bean="duty6" />
+			</list>
+		</property>
+		<property name="job"><ref bean="job4" /></property>
+	</bean>
+	
+	<bean name="descriptor5" class = "acme.entities.descriptor.Descriptor">
+		<property name="description" value="A simple Description"/>
+		<property name="duty">
+			<list>
+				<ref bean="duty4" />
+				<ref bean="duty5" />
+				<ref bean="duty6" />
+			</list>
+		</property>
+		<property name="job"><ref bean="job5" /></property>
 	</bean>
 	
 	<!-- Duties -->

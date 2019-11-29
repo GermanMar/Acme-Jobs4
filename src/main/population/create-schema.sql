@@ -249,6 +249,7 @@
 
     alter table `application` 
        add constraint UK_sqi7i8b9wxmiu57ftr95ssexh unique (`ref`);
+
     alter table `descriptor` 
        add constraint UK_4iw18njo4d0q8gvnhe04vmctw unique (`job_id`);
 
