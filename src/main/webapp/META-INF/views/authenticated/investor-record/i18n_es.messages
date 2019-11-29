@@ -13,9 +13,9 @@ authenticated.investor-record.list.label.invSector = Sector de trabajo
 authenticated.investor-record.list.label.investingStatement = Declaración de inversión
 authenticated.investor-record.list.label.starsNumber = Número de estrellas
 
-anonymous.investor-record.form.label.invname = Nombre de un inversionista
-anonymous.investor-record.form.label.invsector = Sector de trabajo
-anonymous.investor-record.form.label.investingstatement = Declaración de inversión
-anonymous.investor-record.form.label.starsnumber = Número de estrellas
+authenticated.investor-record.form.label.invname = Nombre de un inversionista
+authenticated.investor-record.form.label.invsector = Sector de trabajo
+authenticated.investor-record.form.label.investingstatement = Declaración de inversión
+authenticated.investor-record.form.label.starsnumber = Número de estrellas
 
-anonymous.investor-record.form.button.return = Volver
+authenticated.investor-record.form.button.return = Volver

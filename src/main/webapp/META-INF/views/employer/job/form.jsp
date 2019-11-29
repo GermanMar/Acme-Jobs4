@@ -17,12 +17,12 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="false">
-	<acme:form-textbox code="employer.offer.form.label.reference" path="reference" />
-	<acme:form-textbox code="employer.offer.form.label.title" path="title" />
-	<acme:form-moment code="employer.offer.form.label.deadline" path="deadline" />
-	<acme:form-money code="employer.offer.form.label.salary" path="salary" />
-	<acme:form-url code="employer.offer.form.label.moreInfo" path="moreInfo" />
-	<acme:form-textarea code="employer.offer.form.label.description" path="description" />
+	<acme:form-textbox code="employer.job.form.label.reference" path="reference" />
+	<acme:form-textbox code="employer.job.form.label.title" path="title" />
+	<acme:form-moment code="employer.job.form.label.deadline" path="deadline" />
+	<acme:form-money code="employer.job.form.label.salary" path="salary" />
+	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo" />
+	<acme:form-textarea code="employer.job.form.label.description" path="description" />
 
 	<h4>Descriptor:</h4>
 	<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor" path="descriptor" />
@@ -35,5 +35,5 @@
 			<p>${duty.getPercent()}</p></li>
 	</c:forEach>
 
-	<acme:form-return code="employer.offer.form.button.return" />
+	<acme:form-return code="employer.job.form.button.return" />
 </acme:form>
