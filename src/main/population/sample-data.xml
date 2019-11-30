@@ -122,6 +122,7 @@
 		<property name="creationMoment" value="2018/12/11 23:59"/>
 		<property name="tags" value="first-msg-ever"/>
 		<property name="body" value="This is the first msg"/>
+		<property name="messageThread"><ref bean="msgThread1"/></property>
 	</bean>
 
 	<bean name="msg2" class = "acme.entities.message.Message">
@@ -129,6 +130,7 @@
 		<property name="creationMoment" value="2019/05/11 23:59"/>
 		<property name="tags" value="second-msg-ever"/>
 		<property name="body" value="This is the second msg"/>
+		<property name="messageThread"><ref bean="msgThread1"/></property>
 	</bean>
 	
 	<bean name="msg3" class = "acme.entities.message.Message">
@@ -136,6 +138,7 @@
 		<property name="creationMoment" value="2019/07/11 23:59"/>
 		<property name="tags" value="third-msg-ever"/>
 		<property name="body" value="This is the third msg"/>
+		<property name="messageThread"><ref bean="msgThread1"/></property>
 	</bean>
 	
 	<bean name="msg4" class = "acme.entities.message.Message">
@@ -143,6 +146,7 @@
 		<property name="creationMoment" value="2019/09/11 23:59"/>
 		<property name="tags" value="fourth-msg-ever"/>
 		<property name="body" value="This is the fourth msg"/>
+		<property name="messageThread"><ref bean="msgThread1"/></property>
 	</bean>
 	
 	<bean name="msg5" class = "acme.entities.message.Message">
@@ -150,6 +154,7 @@
 		<property name="creationMoment" value="2019/10/11 23:59"/>
 		<property name="tags" value="fifth-msg-ever"/>
 		<property name="body" value="This is the fifth msg"/>
+		<property name="messageThread"><ref bean="msgThread1"/></property>
 	</bean>
 	
 	<bean name="msg6" class = "acme.entities.message.Message">
@@ -157,6 +162,7 @@
 		<property name="creationMoment" value="2019/11/11 23:59"/>
 		<property name="tags" value="sixth-msg-ever"/>
 		<property name="body" value="This is the sixth msg"/>
+		<property name="messageThread"><ref bean="msgThread1"/></property>
 	</bean>
 
 

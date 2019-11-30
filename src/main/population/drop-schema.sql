@@ -33,15 +33,7 @@
 
     alter table `message` 
        drop 
-       foreign key `FKmovwnj1ff02i7yg1ps5b54rex`;
-
-    alter table `message_thread_message` 
-       drop 
-       foreign key `FKka0a2jm3m6obl7wa6586cqyp4`;
-
-    alter table `message_thread_message` 
-       drop 
-       foreign key `FKp1bkunf5gyu1vtt1q3f2djagy`;
+       foreign key `FKn5adlx3oqjna7aupm8gwg3fuj`;
 
     alter table `message_thread_user_account` 
        drop 
@@ -96,8 +88,6 @@
     drop table if exists `message`;
 
     drop table if exists `message_thread`;
-
-    drop table if exists `message_thread_message`;
 
     drop table if exists `message_thread_user_account`;
 

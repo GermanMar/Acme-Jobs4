@@ -1,11 +1,11 @@
 
 package acme.entities.messageThread;
 
-import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class MessageThread extends DomainEntity implements Serializable {
+public class MessageThread extends DomainEntity {
 
 	private static final long		serialVersionUID	= 1L;
 
@@ -35,10 +35,10 @@ public class MessageThread extends DomainEntity implements Serializable {
 
 	@NotNull
 	@Valid
-	@OneToMany
+	@ManyToMany
 	private Collection<UserAccount>	users;
 
 	@Valid
-	@OneToMany//(mappedBy = "msgThread")
+	@OneToMany(mappedBy = "messageThread")
 	private Collection<Message>		messages;
 }

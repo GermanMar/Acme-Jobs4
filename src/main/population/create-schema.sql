@@ -146,7 +146,7 @@
         `creation_moment` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
-        `msg_thread_id` integer,
+        `message_thread_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -156,11 +156,6 @@
         `creation_moment` datetime(6),
         `title` varchar(255),
         primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `message_thread_message` (
-       `message_thread_id` integer not null,
-        `messages_id` integer not null
     ) engine=InnoDB;
 
     create table `message_thread_user_account` (
@@ -263,12 +258,6 @@
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
-
-    alter table `message_thread_message` 
-       add constraint UK_bx8ll7j8be93gcj4mnbmvm2rk unique (`messages_id`);
-
-    alter table `message_thread_user_account` 
-       add constraint UK_a0wfo1cvpiypbe5yiplae9o59 unique (`users_id`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
 
@@ -328,17 +317,7 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        references `employer` (`id`);
 
     alter table `message` 
-       add constraint `FKmovwnj1ff02i7yg1ps5b54rex` 
-       foreign key (`msg_thread_id`) 
-       references `message_thread` (`id`);
-
-    alter table `message_thread_message` 
-       add constraint `FKka0a2jm3m6obl7wa6586cqyp4` 
-       foreign key (`messages_id`) 
-       references `message` (`id`);
-
-    alter table `message_thread_message` 
-       add constraint `FKp1bkunf5gyu1vtt1q3f2djagy` 
+       add constraint `FKn5adlx3oqjna7aupm8gwg3fuj` 
        foreign key (`message_thread_id`) 
        references `message_thread` (`id`);
 

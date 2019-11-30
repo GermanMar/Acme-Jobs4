@@ -1,7 +1,6 @@
 
 package acme.entities.message;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -9,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import acme.entities.messageThread.MessageThread;
 import acme.framework.entities.DomainEntity;
@@ -19,7 +19,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Message extends DomainEntity implements Serializable {
+public class Message extends DomainEntity {
 
 	/**
 	 *
@@ -37,7 +37,8 @@ public class Message extends DomainEntity implements Serializable {
 	@Column(length = 1024)
 	private String				body;
 
+	@NotNull
 	@Valid
 	@ManyToOne(optional = true)
-	private MessageThread		msgThread;
+	private MessageThread		messageThread;
 }
