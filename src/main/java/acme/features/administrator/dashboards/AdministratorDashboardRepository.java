@@ -50,4 +50,10 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select p.sector, count(p) from InvestorRecord p group by p.sector")
 	Collection<Object[]> findAllInvestors();
 
+	@Query("select avg(select count(j) from Job j where j.employer.id = e.id) from Employer e")
+	Double averageNumberJobsPerEmployer();
+
+	@Query("select avg(select count(a) from Application a where a.worker.id = w.id) from Worker w")
+	Double averageNumberOfApplicationPerWorker();
+
 }

@@ -23,3 +23,5 @@ administrator.dashboard.form.minimumOffers = Oferta mínima
 administrator.dashboard.form.maximumOffers = Oferta máxima
 administrator.dashboard.form.averageOffers = Promedio de ofertas
 administrator.dashboard.form.desviationOffers = Desviación estándar de ofertas
+administrator.dashboard.form.averageJobsPerEmployer = Promedio de trabajos por empleadores
+administrator.dashboard.form.averageApplicationPerWorker = Promedia de aplicaciones por trabajadores

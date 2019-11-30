@@ -17,6 +17,8 @@
 <acme:form-double code="administrator.dashboard.form.maximumOffers" path="maximumOffers"/>
 <acme:form-double code="administrator.dashboard.form.averageOffers" path="averageOffers"/>
 <acme:form-double code="administrator.dashboard.form.desviationOffers" path="desviationOffers"/>
+<acme:form-double code="administrator.dashboard.form.averageJobsPerEmployer" path="averageJobsPerEmployer"/>
+<acme:form-double code="administrator.dashboard.form.averageApplicationPerWorker" path="averageApplicationPerWorker"/>
 
 
 <div>
