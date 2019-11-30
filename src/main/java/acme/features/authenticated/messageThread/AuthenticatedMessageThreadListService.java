@@ -42,7 +42,7 @@ public class AuthenticatedMessageThreadListService implements AbstractListServic
 		Collection<MessageThread> result;
 		Principal principal;
 		principal = request.getPrincipal();
-		result = this.repository.findManyByUserId(principal.getActiveRoleId());
+		result = this.repository.findManyMessageThreadByUserId(principal.getActiveRoleId());
 
 		return result;
 	}
