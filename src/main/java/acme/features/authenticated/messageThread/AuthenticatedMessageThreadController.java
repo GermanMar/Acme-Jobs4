@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.components.CustomCommand;
 import acme.entities.messageThread.MessageThread;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
@@ -18,7 +17,7 @@ import acme.framework.entities.Authenticated;
 public class AuthenticatedMessageThreadController extends AbstractController<Authenticated, MessageThread> {
 
 	@Autowired
-	private AuthenticatedMessageThreadListService	listMineService;
+	private AuthenticatedMessageThreadListService	listService;
 
 	@Autowired
 	private AuthenticatedMessageThreadShowService	showService;
@@ -26,7 +25,7 @@ public class AuthenticatedMessageThreadController extends AbstractController<Aut
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
