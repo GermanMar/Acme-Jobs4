@@ -46,6 +46,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double desviationOffers = this.repository.getDesviationOffers();
 		Double averageJobsPerEmployer = this.repository.averageNumberJobsPerEmployer();
 		Double averageApplicationPerWorker = this.repository.averageNumberOfApplicationPerWorker();
+		Double averageNumberOfApplicationPerEmployer = this.repository.averageNumberOfApplicationPerEmployer();
 
 		request.unbind(entity, model, "labels", "numC", "numI");
 
@@ -62,6 +63,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		model.setAttribute("desviationOffers", desviationOffers);
 		model.setAttribute("averageJobsPerEmployer", averageJobsPerEmployer);
 		model.setAttribute("averageApplicationPerWorker", averageApplicationPerWorker);
+		model.setAttribute("averageNumberOfApplicationPerEmployer", averageNumberOfApplicationPerEmployer);
 
 	}
 

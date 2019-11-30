@@ -25,3 +25,4 @@ administrator.dashboard.form.averageOffers = Average Offers
 administrator.dashboard.form.desviationOffers = Standard deviation Offers
 administrator.dashboard.form.averageJobsPerEmployer = Average Jobs Per Employer
 administrator.dashboard.form.averageApplicationPerWorker = Average Application Per Worker
+administrator.dashboard.form.averageNumberOfApplicationPerEmployer = Average Application Per Employer
