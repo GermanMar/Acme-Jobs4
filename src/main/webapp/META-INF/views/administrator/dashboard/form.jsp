@@ -3,21 +3,24 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<h2>	
+<h2>
 	<acme:message code="administrator.dashboard.form.title.company" />
 </h2>
-<acme:form-integer code="administrator.dashboard.form.totalAnnounencents" path="totalAnnouncements"/>
-<acme:form-integer code="administrator.dashboard.form.totalInvestor" path="totalInvestor"/>
-<acme:form-integer code="administrator.dashboard.form.totalCompany" path="totalCompany"/>
-<acme:form-double code="administrator.dashboard.form.minimumRequest" path="minimumRequest"/>
-<acme:form-double code="administrator.dashboard.form.maximumRequest" path="maximumRequest"/>
-<acme:form-double code="administrator.dashboard.form.averageRequest" path="averageRequest"/>
-<acme:form-double code="administrator.dashboard.form.desviationRequest" path="desviationRequest"/>
-<acme:form-double code="administrator.dashboard.form.minimumOffers" path="minimumOffers"/>
-<acme:form-double code="administrator.dashboard.form.maximumOffers" path="maximumOffers"/>
-<acme:form-double code="administrator.dashboard.form.averageOffers" path="averageOffers"/>
-<acme:form-double code="administrator.dashboard.form.desviationOffers" path="desviationOffers"/>
-
+<acme:form-integer code="administrator.dashboard.form.totalAnnounencents" path="totalAnnouncements" />
+<acme:form-integer code="administrator.dashboard.form.totalInvestor" path="totalInvestor" />
+<acme:form-integer code="administrator.dashboard.form.totalCompany" path="totalCompany" />
+<acme:form-double code="administrator.dashboard.form.minimumRequest" path="minimumRequest" />
+<acme:form-double code="administrator.dashboard.form.maximumRequest" path="maximumRequest" />
+<acme:form-double code="administrator.dashboard.form.averageRequest" path="averageRequest" />
+<acme:form-double code="administrator.dashboard.form.desviationRequest" path="desviationRequest" />
+<acme:form-double code="administrator.dashboard.form.minimumOffers" path="minimumOffers" />
+<acme:form-double code="administrator.dashboard.form.maximumOffers" path="maximumOffers" />
+<acme:form-double code="administrator.dashboard.form.averageOffers" path="averageOffers" />
+<acme:form-double code="administrator.dashboard.form.desviationOffers" path="desviationOffers" />
+<acme:form-double code="administrator.dashboard.form.averageJobsPerEmployer" path="averageJobsPerEmployer" />
+<acme:form-double code="administrator.dashboard.form.averageApplicationPerWorker" path="averageApplicationPerWorker" />
+<acme:form-double code="administrator.dashboard.form.averageNumberOfApplicationPerEmployer"
+	path="averageNumberOfApplicationPerEmployer" />
 
 <div>
 	<canvas id="canvas1"></canvas>
