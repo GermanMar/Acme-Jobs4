@@ -23,16 +23,17 @@
 	<acme:form-money code="authenticated.job.form.label.salary" path="salary"/>
 	<acme:form-url code="authenticated.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="authenticated.job.form.label.description" path="description"/>
-	<h4>Descriptor:</h4>
+	
+	<acme:message code="authenticated.job.descriptor"/>
 	<acme:form-textarea readonly="true" code="authenticated.job.form.label.descriptor" path="descriptor"/>
 	
-	<h4>Duties:</h4>
+	<acme:message code="authenticated.job.duties"/>
 	<c:forEach items="${duties}" var="duty">
 	    <li>
 	    	<Strong>Duty:</Strong>
-	    	<p>${duty.getTitle()}</p>
-	    	<p>${duty.getDescription()}</p>
-	    	<p>${duty.getPercent()}</p>
+	    	<p><acme:message code="authenticated.job.title"/>  ${duty.getTitle()}</p>
+	    	<p><acme:message code="authenticated.job.description"/>  ${duty.getDescription()}</p>
+	    	<p><acme:message code="authenticated.job.percent"/>  ${duty.getPercent()}</p>
 	    </li>
 	</c:forEach>
 		

@@ -7,6 +7,13 @@ employer.job.form.label.title = Title
 employer.job.form.label.deadline = Deadline
 employer.job.form.label.salary = Salary
 employer.job.form.label.moreInfo = More Info
+
+employer.job.descriptor = <h4>Descriptor:</h4>
 employer.job.form.label.description = Description
+
+employer.job.duties = <h4>Duties:</h4>
+employer.job.title = Title:
+employer.job.description = Description:
+employer.job.percent = Percent:
 
 employer.job.form.button.return = Return
