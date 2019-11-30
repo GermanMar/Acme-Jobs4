@@ -3,8 +3,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="anonymous.investor-record.list.label.invname" path="name" width="20%"/>
-	<acme:list-column code="anonymous.investor-record.list.label.invsector" path="sector" width="20%"/>
-	<acme:list-column code="anonymous.investor-record.list.label.investingstatement" path="statement" width="20%"/>
-	<acme:list-column code="anonymous.investor-record.list.label.starsnumber" path="stars" width="20%"/>
+	<acme:list-column code="authenticated.investor-record.list.label.invname" path="name" width="20%"/>
+	<acme:list-column code="authenticated.investor-record.list.label.invsector" path="sector" width="20%"/>
+	<acme:list-column code="authenticated.investor-record.list.label.investingstatement" path="statement" width="20%"/>
+	<acme:list-column code="authenticated.investor-record.list.label.starsnumber" path="stars" width="20%"/>
 </acme:list>

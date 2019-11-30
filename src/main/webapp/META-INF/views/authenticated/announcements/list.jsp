@@ -4,6 +4,6 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-    <acme:list-column code="anonymous.announcements.list.label.title" path="title" width="20%"/>
-    <acme:list-column code="anonymous.announcements.list.label.creationdate" path="creationdate" width="40%"/>       
+    <acme:list-column code="authenticated.announcements.list.label.title" path="title" width="20%"/>
+    <acme:list-column code="authenticated.announcements.list.label.creationdate" path="creationdate" width="40%"/>       
 </acme:list>

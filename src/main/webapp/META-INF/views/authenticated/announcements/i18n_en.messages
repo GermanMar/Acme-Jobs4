@@ -1,8 +1,8 @@
-anonymous.announcements.list.label.title = Title
-anonymous.announcements.list.label.creationdate = Creation Date
+authenticated.announcements.list.label.title = Title
+authenticated.announcements.list.label.creationdate = Creation Date
 
-anonymous.announcements.form.label.title = Title:
-anonymous.announcements.form.label.creationdate = Creation Date:
-anonymous.announcements.form.label.addinfo = Additional Info:
-anonymous.announcements.form.label.text = Description:
-anonymous.announcements.form.button.return = Return
+authenticated.announcements.form.label.title = Title:
+authenticated.announcements.form.label.creationdate = Creation Date:
+authenticated.announcements.form.label.addinfo = Additional Info:
+authenticated.announcements.form.label.text = Description:
+authenticated.announcements.form.button.return = Return
