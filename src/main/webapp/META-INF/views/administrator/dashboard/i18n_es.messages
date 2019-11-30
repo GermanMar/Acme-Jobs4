@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.dashboard.form.title.application-status = Panel de Indicadores
+administrator.dashboard.form.title.company = <h2>Panel de Indicadores</h2>
 
 administrator.dashboard.form.totalAnnounencents = Anuncios totales
 administrator.dashboard.form.totalInvestor = Registros de inversiones totales
@@ -26,3 +26,6 @@ administrator.dashboard.form.desviationOffers = Desviación estándar de ofertas
 administrator.dashboard.form.averageJobsPerEmployer = Promedio de trabajos por empleadores
 administrator.dashboard.form.averageApplicationPerWorker = Promedio de aplicaciones por trabajadores
 administrator.dashboard.form.averageNumberOfApplicationPerEmployer = Promedio de aplicaciones por employer
+administrator.dashboard.form.averageApplicationPerWorker = Promedia de aplicaciones por trabajadores
+administrator.dashboard.form.title.jobs = <h4>Trabajos:</h4>
+administrator.dashboard.form.title.applications = <h4>Solicitudes:</h4>

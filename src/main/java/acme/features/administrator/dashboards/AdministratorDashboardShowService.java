@@ -48,6 +48,12 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double averageApplicationPerWorker = this.repository.averageNumberOfApplicationPerWorker();
 		Double averageNumberOfApplicationPerEmployer = this.repository.averageNumberOfApplicationPerEmployer();
 
+		Integer ratioOfDraftJobs = this.repository.ratioOfDraftJobs();
+		Integer ratioOfPublishedJobs = this.repository.ratioOfPublishedJobs();
+		Integer ratioOfAcceptedApplications = this.repository.ratioOfAcceptedApplications();
+		Integer ratioOfRejectedApplications = this.repository.ratioOfRejectedApplications();
+		Integer ratioOfPendingApplications = this.repository.ratioOfPendingApplications();
+
 		request.unbind(entity, model, "labels", "numC", "numI");
 
 		model.setAttribute("totalAnnouncements", totalAnnouncements);
@@ -64,6 +70,12 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		model.setAttribute("averageJobsPerEmployer", averageJobsPerEmployer);
 		model.setAttribute("averageApplicationPerWorker", averageApplicationPerWorker);
 		model.setAttribute("averageNumberOfApplicationPerEmployer", averageNumberOfApplicationPerEmployer);
+
+		model.setAttribute("ratioOfDraftJobs", ratioOfDraftJobs);
+		model.setAttribute("ratioOfPublishedJobs", ratioOfPublishedJobs);
+		model.setAttribute("ratioOfAcceptedApplications", ratioOfAcceptedApplications);
+		model.setAttribute("ratioOfRejectedApplications", ratioOfRejectedApplications);
+		model.setAttribute("ratioOfPendingApplications", ratioOfPendingApplications);
 
 	}
 
