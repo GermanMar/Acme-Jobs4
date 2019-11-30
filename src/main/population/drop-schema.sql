@@ -19,6 +19,10 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `commercial` 
+       drop 
+       foreign key `FK2jw28sba4n2gi3xdkdqqhm870`;
+
     alter table `consumer` 
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
@@ -39,6 +43,10 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
+    alter table `non_commercial` 
+       drop 
+       foreign key `FKqo73ln7f61vbg9r4a06esfujd`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
@@ -50,6 +58,10 @@
     alter table `spamlist_spamword` 
        drop 
        foreign key `FK5jb8ulpt52m5bpmunrt22733b`;
+
+    alter table `sponsor` 
+       drop 
+       foreign key FK_20xk0ev32hlg96kqynl6laie2;
 
     alter table `worker` 
        drop 
@@ -98,6 +110,8 @@
     drop table if exists `spamlist_spamword`;
 
     drop table if exists `spamword`;
+
+    drop table if exists `sponsor`;
 
     drop table if exists `user_account`;
 

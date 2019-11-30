@@ -89,6 +89,12 @@ master.menu.worker.favourite-link = Link favorito
 master.menu.worker.job.list = Lista de mis trabajos
 master.menu.worker.application.list = Lista de mis trabajos
 
+# master.menu.sponsor ####################################################
+
+master.menu.sponsor.commercial.list = Banners Comerciales
+master.menu.sponsor.noncommercial.list = Banners no comerciales
+master.menu.sponsor = Patrocinador
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
