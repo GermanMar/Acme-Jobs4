@@ -30,5 +30,4 @@ mvnw
 
 mvnw\.cmd
 /bin/
-src/main/java/acme/entities/spamlist/Spamlist.java
 src/main/population/entity-map.properties
