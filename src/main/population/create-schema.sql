@@ -78,6 +78,7 @@
         `card` varchar(255),
         `slogan` varchar(255),
         `url` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -164,6 +165,7 @@
         `jingle` varchar(255),
         `slogan` varchar(255),
         `url` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -217,6 +219,15 @@
        `id` integer not null,
         `version` integer not null,
         `spamword` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `sponsor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `card_credit` varchar(255),
+        `organisation` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -298,6 +309,11 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `commercial` 
+       add constraint `FK2jw28sba4n2gi3xdkdqqhm870` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
@@ -323,6 +339,11 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        foreign key (`employer_id`) 
        references `employer` (`id`);
 
+    alter table `non_commercial` 
+       add constraint `FKqo73ln7f61vbg9r4a06esfujd` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
@@ -337,6 +358,11 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        add constraint `FK5jb8ulpt52m5bpmunrt22733b` 
        foreign key (`spamlist_id`) 
        references `spamlist` (`id`);
+
+    alter table `sponsor` 
+       add constraint FK_20xk0ev32hlg96kqynl6laie2 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
 
     alter table `worker` 
        add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 

@@ -83,6 +83,12 @@
 			<acme:menu-suboption code="master.menu.worker.job.list" action="/worker/job/list_mine"/>
 			<acme:menu-suboption code="master.menu.worker.application.list" action="/worker/application/list_mine"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
+			<acme:menu-suboption code="master.menu.worker.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.sponsor.commercial.list" action="/sponsor/commercial/list_mine"/>
+			<acme:menu-suboption code="master.menu.sponsor.noncommercial.list" action="/sponsor/non-commercial/list_mine"/>
+		</acme:menu-option>
 	</acme:menu-left>
 	
 

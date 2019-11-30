@@ -239,6 +239,8 @@
 		<property name="userAccount" ref="employer5UserAccount" />
 	</bean>
 	
+	
+	
 	<!-- Employer6 -->
 	<bean name="employer6UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="employer6" />
@@ -268,6 +270,69 @@
 	<bean id="employer6Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="employer6UserAccount" />
 	</bean>
+	
+	
+	<!-- Sponsor 1 -->
+	<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor1" />
+		<property name="password" value="sponsor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="One" />
+				<property name="email" value="sponsor1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor1Sponsor" />
+				<ref bean="sponsor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="sponsor1Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organisation" value="Acme Jobs" />
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+
+	<bean id="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+	
+	
+	
+	<!-- Sponsor 2 -->
+	<bean name="sponsor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor2" />
+		<property name="password" value="sponsor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="Two" />
+				<property name="email" value="sponsor2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor2Sponsor" />
+				<ref bean="sponsor2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="sponsor2Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organisation" value="Acme Jobs" />
+		<property name="cardCredit" value="5541147884695762" />
+		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+
+	<bean id="sponsor2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+	
 	
 	<!-- Workers -->
 	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
@@ -737,12 +802,14 @@
 		<property name="banner" value="https://i.pinimg.com/474x/0d/02/9d/0d029d10452ecea33f9409e91c1ea64a.jpg" />
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
+		<property name="sponsor" ref="sponsor2Sponsor"/>
 	</bean>
 
 	<bean id="banner02" class="acme.entities.nonCommercial.NonCommercial">
 		<property name="banner" value="https://i.pinimg.com/originals/b2/f3/cf/b2f3cfcce5bcd36855a309743df4852b.jpg" />
 		<property name="slogan" value="Never too late boys." />
 		<property name="url" value="https://www.google.es" />
+		<property name="sponsor" ref="sponsor2Sponsor"/>
 	</bean>
 
 	<bean id="banner03" class="acme.entities.nonCommercial.NonCommercial">
@@ -750,6 +817,7 @@
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="jingle" value="https://www.youtube.com/watch?v=VfLf7A_-1Vw" />
+		<property name="sponsor" ref="sponsor2Sponsor"/>
 	</bean>
 
 	<bean id="banner04" class="acme.entities.commercial.Commercial">
@@ -757,6 +825,8 @@
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="card" value="5541147884694773" />
+		<property name="sponsor" ref="sponsor2Sponsor"/>
+		
 	</bean>
 
 	<bean id="banner05" class="acme.entities.commercial.Commercial">
@@ -764,6 +834,7 @@
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="card" value="5496675056390627" />
+		<property name="sponsor" ref="sponsor2Sponsor"/>
 	</bean>
 
 	<bean id="banner06" class="acme.entities.commercial.Commercial">
@@ -771,6 +842,7 @@
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="card" value="5422301936093054" />
+		<property name="sponsor" ref="sponsor2Sponsor"/>	
 	</bean>
 
 	<!-- Challenge -->
