@@ -3,6 +3,7 @@ authenticated.job.list.label.deadline = Fecha de fin
 authenticated.job.list.label.title = Título
 
 authenticated.job.form.label.reference = Referencia
+authenticated.job.form.label.status = Estado
 authenticated.job.form.label.title = Título
 authenticated.job.form.label.deadline = Fecha de Fin
 authenticated.job.form.label.salary = Salario

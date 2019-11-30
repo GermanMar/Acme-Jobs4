@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.dashboard.form.title.company = DashBoard
+administrator.dashboard.form.title.company = <h2>DashBoard</h2>
 
 administrator.dashboard.form.totalAnnounencents = Total Announcements
 administrator.dashboard.form.totalInvestor = Total Investor Records
@@ -25,3 +25,5 @@ administrator.dashboard.form.averageOffers = Average Offers
 administrator.dashboard.form.desviationOffers = Standard deviation Offers
 administrator.dashboard.form.averageJobsPerEmployer = Average Jobs Per Employer
 administrator.dashboard.form.averageApplicationPerWorker = Average Application Per Worker
+administrator.dashboard.form.title.jobs = <h4>Jobs:</h4>
+administrator.dashboard.form.title.applications = <h4>Applications:</h4>

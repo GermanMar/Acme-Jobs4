@@ -46,6 +46,10 @@ public class Job extends DomainEntity {
 	private String					reference;
 
 	@NotBlank
+	@Pattern(regexp = "DRAFT|PUBLISHED")
+	private String					status;
+
+	@NotBlank
 	private String					title;
 
 	@NotNull

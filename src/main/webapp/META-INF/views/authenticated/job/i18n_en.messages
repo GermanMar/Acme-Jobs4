@@ -3,6 +3,7 @@ authenticated.job.list.label.deadline = Deadline
 authenticated.job.list.label.title = Title
 
 authenticated.job.form.label.reference = Reference
+authenticated.job.form.label.status = Status
 authenticated.job.form.label.title = Title
 authenticated.job.form.label.deadline = Deadline
 authenticated.job.form.label.salary = Salary

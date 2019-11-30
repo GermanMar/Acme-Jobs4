@@ -3,6 +3,7 @@ employer.job.list.label.deadline = Fecha de fin
 employer.job.list.label.title = Título
 
 employer.job.form.label.reference = Referencia
+employer.job.form.label.status = Estado
 employer.job.form.label.title = Título
 employer.job.form.label.deadline = Fecha de Fin
 employer.job.form.label.salary = Salario

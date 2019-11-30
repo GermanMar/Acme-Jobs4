@@ -50,6 +50,21 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select p.sector, count(p) from InvestorRecord p group by p.sector")
 	Collection<Object[]> findAllInvestors();
 
+	@Query("select count(p) from Job p where p.status = 'DRAFT'")
+	Integer ratioOfDraftJobs();
+
+	@Query("select count(p) from Job p where p.status = 'PUBLISHED'")
+	Integer ratioOfPublishedJobs();
+
+	@Query("select count(p) from Application p where p.status = 'PENDING'")
+	Integer ratioOfPendingApplications();
+
+	@Query("select count(p) from Application p where p.status = 'ACCEPTED'")
+	Integer ratioOfAcceptedApplications();
+
+	@Query("select count(p) from Application p where p.status = 'REJECTED'")
+	Integer ratioOfRejectedApplications();
+
 	@Query("select avg(select count(j) from Job j where j.employer.id = e.id) from Employer e")
 	Double averageNumberJobsPerEmployer();
 

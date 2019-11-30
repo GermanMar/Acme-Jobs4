@@ -3,9 +3,8 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<h2>	
-	<acme:message code="administrator.dashboard.form.title.company" />
-</h2>
+<acme:message code="administrator.dashboard.form.title.company" />
+
 <acme:form-integer code="administrator.dashboard.form.totalAnnounencents" path="totalAnnouncements"/>
 <acme:form-integer code="administrator.dashboard.form.totalInvestor" path="totalInvestor"/>
 <acme:form-integer code="administrator.dashboard.form.totalCompany" path="totalCompany"/>
@@ -19,7 +18,6 @@
 <acme:form-double code="administrator.dashboard.form.desviationOffers" path="desviationOffers"/>
 <acme:form-double code="administrator.dashboard.form.averageJobsPerEmployer" path="averageJobsPerEmployer"/>
 <acme:form-double code="administrator.dashboard.form.averageApplicationPerWorker" path="averageApplicationPerWorker"/>
-
 
 <div>
 	<canvas id="canvas1"></canvas>
@@ -80,6 +78,115 @@
 		var canvas, context;
 		
 		canvas = document.getElementById("canvas1");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type : "bar",
+			data : data,
+			options : options
+		});
+	});
+</script>
+	
+<acme:message code="administrator.dashboard.form.title.applications" />
+
+<div>
+	<canvas id="canvas2"></canvas>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var data = {
+				labels: [
+					"PENDING", "ACCEPTED", "REJECTED"
+				],
+				datasets : [
+					{
+						label: "Aplications",
+						data : [
+							<jstl:out value = "${ratioOfPendingApplications}" />,
+							<jstl:out value = "${ratioOfAcceptedApplications}" />,
+							<jstl:out value = "${ratioOfRejectedApplications}" />
+						],backgroundColor: [
+							"#7FFF00", "#7FFF00", "#7FFF00"
+			            ]	
+						
+					}
+				]		
+		};
+		
+		var options = {
+				scales : {
+					yAxes : [
+						{
+							ticks : {
+								suggestedMin : 0.0,
+								suggestedMax : 10.0
+							}
+						}
+					]
+				},
+				legend : {
+					display : true
+				}
+		};
+		
+		var canvas, context;
+		
+		canvas = document.getElementById("canvas2");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type : "bar",
+			data : data,
+			options : options
+		});
+	});
+</script>
+
+<acme:message code="administrator.dashboard.form.title.jobs" />
+
+<div>
+	<canvas id="canvas3"></canvas>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var data = {
+				labels: [
+					"DRAFT", "PUBLISHED"
+				],
+				datasets : [
+					{
+						label: "Jobs",
+						data : [
+							<jstl:out value = "${ratioOfDraftJobs}" />,
+							<jstl:out value = "${ratioOfPublishedJobs}" />
+						],backgroundColor: [
+							"#9932CC", "#9932CC"
+			            ]	
+						
+					}
+				]		
+		};
+		
+		var options = {
+				scales : {
+					yAxes : [
+						{
+							ticks : {
+								suggestedMin : 0.0,
+								suggestedMax : 10.0
+							}
+						}
+					]
+				},
+				legend : {
+					display : true
+				}
+		};
+		
+		var canvas, context;
+		
+		canvas = document.getElementById("canvas3");
 		context = canvas.getContext("2d");
 		new Chart(context, {
 			type : "bar",
