@@ -43,11 +43,11 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "creationMoment");
+		request.unbind(entity, model, "title", "creationMoment", "message");
 
-		Collection<Authenticated> users = entity.getUsers();
+		//Collection<Authenticated> users = entity.getUsers();
 
-		model.setAttribute("users", users);
+		//model.setAttribute("users", users);
 
 		Collection<Message> messages = entity.getMessage();
 
