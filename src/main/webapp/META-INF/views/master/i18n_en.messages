@@ -108,6 +108,7 @@ master.menu.challenge.challenges-list = Challenges
 master.menu.offer.offer-list = Offers
 master.menu.request.requests-list = Requests
 master.menu.authenticated.job-list = Job List
+master.menu.authenticated.msgThread-list = Message Threads
 
 
 # master.footer ###############################################################

@@ -31,6 +31,26 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
+    alter table `message` 
+       drop 
+       foreign key `FKmovwnj1ff02i7yg1ps5b54rex`;
+
+    alter table `message_thread_message` 
+       drop 
+       foreign key `FKka0a2jm3m6obl7wa6586cqyp4`;
+
+    alter table `message_thread_message` 
+       drop 
+       foreign key `FKp1bkunf5gyu1vtt1q3f2djagy`;
+
+    alter table `message_thread_user_account` 
+       drop 
+       foreign key `FKnbmip5t870fxbecafgaxvyde8`;
+
+    alter table `message_thread_user_account` 
+       drop 
+       foreign key `FKtchis3o5qij98x87mty6hdk4d`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
@@ -72,6 +92,14 @@
     drop table if exists `investor_record`;
 
     drop table if exists `job`;
+
+    drop table if exists `message`;
+
+    drop table if exists `message_thread`;
+
+    drop table if exists `message_thread_message`;
+
+    drop table if exists `message_thread_user_account`;
 
     drop table if exists `non_commercial`;
 

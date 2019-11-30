@@ -1,0 +1,4 @@
+authenticated.messageThread.form.label.title = Title
+authenticated.messageThread.form.label.title = Creation moment
+authenticated.messageThread.form.label.title = Users
+authenticated.messageThread.form.label.title = Messages
