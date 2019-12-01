@@ -43,6 +43,18 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
+    alter table `message` 
+       drop 
+       foreign key `FKq851een84mnkrhyssa05q7je`;
+
+    alter table `message_thread_authenticated` 
+       drop 
+       foreign key `FKsnymblhgu3dixq3t2qhptr4x2`;
+
+    alter table `message_thread_authenticated` 
+       drop 
+       foreign key `FKjb0tx79q4dpibs3mnkp6wfqvf`;
+
     alter table `non_commercial` 
        drop 
        foreign key `FKqo73ln7f61vbg9r4a06esfujd`;
@@ -96,6 +108,12 @@
     drop table if exists `investor_record`;
 
     drop table if exists `job`;
+
+    drop table if exists `message`;
+
+    drop table if exists `message_thread`;
+
+    drop table if exists `message_thread_authenticated`;
 
     drop table if exists `non_commercial`;
 
