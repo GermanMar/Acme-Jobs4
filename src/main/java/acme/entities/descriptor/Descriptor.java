@@ -4,7 +4,6 @@ package acme.entities.descriptor;
 import java.util.Collection;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
@@ -32,9 +31,10 @@ public class Descriptor extends DomainEntity {
 	@NotBlank
 	private String				description;
 
+	//	fetch = FetchType.EAGER
 	@NotNull
 	@Valid
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "descriptor")
+	@OneToMany(mappedBy = "descriptor")
 	private Collection<Duty>	duty;
 
 	//RelationShips
