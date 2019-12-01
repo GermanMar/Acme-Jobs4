@@ -19,19 +19,6 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.message-thread.form.label.title" path="title" />
 	<acme:form-moment code="authenticated.message-thread.form.label.creationMoment" path="creationMoment"/>
-	
-	<%-- 
-	<!-- Users -->
-	<acme:message code="authenticated.message-thread.users"/>
-	
-	<c:forEach items="${users}" var="users">
-	    <li>
-	    	<Strong>Duty:</Strong>
-	    	<p><acme:message code="authenticated.message-thread.title"/>  ${}</p>
-	    	<p><acme:message code="authenticated.message-thread.description"/>  ${duty.getDescription()}</p>
-	    	<p><acme:message code="authenticated.message-thread.percent"/>  ${duty.getPercent()}</p>
-	    </li>
-	</c:forEach> --%>
 		
 	<!-- Messages -->
 	<acme:message code="authenticated.message-thread.messages"/>	
