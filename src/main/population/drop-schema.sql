@@ -63,13 +63,9 @@
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
-    alter table `spamlist_spamword` 
+    alter table `spamword` 
        drop 
-       foreign key `FK3yymitdjrt0d5uga8pg7curk3`;
-
-    alter table `spamlist_spamword` 
-       drop 
-       foreign key `FK5jb8ulpt52m5bpmunrt22733b`;
+       foreign key `FKrk7poykhk0ukf2dm6oqv3rejm`;
 
     alter table `sponsor` 
        drop 
@@ -124,8 +120,6 @@
     drop table if exists `request`;
 
     drop table if exists `spamlist`;
-
-    drop table if exists `spamlist_spamword`;
 
     drop table if exists `spamword`;
 

@@ -1,15 +1,14 @@
+
 package acme.entities.spamlist;
 
 import java.beans.Transient;
 import java.util.Collection;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -22,8 +21,9 @@ public class Spamlist extends DomainEntity {
 
 	private static final long		serialVersionUID	= 1L;
 
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, targetEntity = Spamword.class)
-	@NotFound(action = NotFoundAction.IGNORE)
+	@NotNull
+	@Valid
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "spamlist")
 	private Collection<Spamword>	spamwordslist;
 
 
@@ -31,7 +31,7 @@ public class Spamlist extends DomainEntity {
 	public Double getThreshold() {
 		Double result = 0.;
 
-		while (result <= this.spamwordslist.size()) {
+		while (result < this.spamwordslist.size()) {
 			result++;
 		}
 

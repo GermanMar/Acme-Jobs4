@@ -235,15 +235,11 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `spamlist_spamword` (
-       `spamlist_id` integer not null,
-        `spamwordslist_id` integer not null
-    ) engine=InnoDB;
-
     create table `spamword` (
        `id` integer not null,
         `version` integer not null,
         `spamword` varchar(255),
+        `spamlist_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -301,9 +297,6 @@ create index IDXq4d9sbuyxv92qtwohvgbai27y on `request` (`dead_line`, `ticker`);
 
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
-
-    alter table `spamlist_spamword` 
-       add constraint UK_2p294jdiyi4liuqsm6btfd869 unique (`spamwordslist_id`);
 create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
 
     alter table `user_account` 
@@ -389,13 +382,8 @@ create index IDX2insomc4a40jprju8tmgcvmig on `spamword` (`spamword`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `spamlist_spamword` 
-       add constraint `FK3yymitdjrt0d5uga8pg7curk3` 
-       foreign key (`spamwordslist_id`) 
-       references `spamword` (`id`);
-
-    alter table `spamlist_spamword` 
-       add constraint `FK5jb8ulpt52m5bpmunrt22733b` 
+    alter table `spamword` 
+       add constraint `FKrk7poykhk0ukf2dm6oqv3rejm` 
        foreign key (`spamlist_id`) 
        references `spamlist` (`id`);
 

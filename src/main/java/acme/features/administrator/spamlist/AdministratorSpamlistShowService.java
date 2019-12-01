@@ -38,7 +38,7 @@ public class AdministratorSpamlistShowService implements AbstractShowService<Adm
 
 		request.unbind(entity, model, "threshold");
 
-		spamwords = entity.getSpamwordslist();
+		spamwords = this.repository.findManySpamwordsById(entity.getId());
 		buffer = new StringBuilder();
 		buffer.append("[");
 		Integer x = spamwords.size();

@@ -48,7 +48,7 @@ public class AdministratorSpamlistUpdateService implements AbstractUpdateService
 
 		request.unbind(entity, model, "threshold");
 
-		spamwords = entity.getSpamwordslist();
+		spamwords = this.repository.findManySpamwordsById(entity.getId());
 		buffer = new StringBuilder();
 		buffer.append("[");
 		Integer x = spamwords.size();
@@ -122,17 +122,20 @@ public class AdministratorSpamlistUpdateService implements AbstractUpdateService
 		String nw = request.getModel().getString("newSpamword");
 		String delete = request.getModel().getString("deleteSpamword");
 
-		Collection<Spamword> spamwordslist = entity.getSpamwordslist();
+		Collection<Spamword> spamwordslist = this.repository.findManySpamwordsById(entity.getId());
 
 		//Add a new spamword.
 		//1. Create the new Spamword.
 		Spamword newSpamword = new Spamword();
 		newSpamword.setSpamword(nw);
+		newSpamword.setSpamlist(entity);
 
 		//2.Check that the written data is not empty.
 		if (nw != "") {
-			//3.Add the Spamword to the spamwordslist attribute in Spamlist. This makes it persist in the database.
+			//3.Add the Spamword to the spamwordslist attribute in Spamlist.
 			spamwordslist.add(newSpamword);
+			//4.Save the new Spamword in the repository to persist them.
+			this.repository.save(newSpamword);
 		}
 
 		//Delete a existing spamword.
@@ -142,9 +145,7 @@ public class AdministratorSpamlistUpdateService implements AbstractUpdateService
 			Spamword deleteSpamword = this.repository.findOneSpamword(delete, entity.getId());
 			//3.Remove the Spamword from the spamwordslist attribute in Spamlist.
 			spamwordslist.remove(deleteSpamword);
-			//4.Delete the relationship from Spamword and Spamlist. Necessary to delete the Spamword
-			this.repository.deleteSpamwordRelationship(deleteSpamword.getId());
-			//5. Delete the Spamword in the database.
+			//4 Delete the Spamword in the database.
 			this.repository.deleteSpamword(deleteSpamword.getId());
 		}
 

@@ -9,63 +9,103 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	
+	<!-- EN SpamwordList -->
 
 	<bean id="spamEn" class="acme.entities.spamlist.Spamlist">
 		<property name="spamwordslist">
 			<list>
-				<bean id="string01" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="sex" />
-				</bean>
-				<bean id="string02" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="hard core" />
-				</bean>
-				<bean id="string03" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="viagra" />
-				</bean>
-				<bean id="string04" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="cialis" />
-				</bean>
-				<bean id="string05" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="nigeria" />
-				</bean>
-				<bean id="string06" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="you´ve won" />
-				</bean>
-				<bean id="string07" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="million dollar" />
-				</bean>
+				<ref bean = "string01" />
+				<ref bean = "string02" />
+				<ref bean = "string03" />
+				<ref bean = "string04" />
+				<ref bean = "string05" />
+				<ref bean = "string06" />
+				<ref bean = "string07" />
 			</list>
 		</property>
 	</bean>
+	
+	<!-- Spamwords -->
+	
+	<bean id="string01" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="sex" />
+		<property name = "spamlist"><ref bean = "spamEn" /></property>
+	</bean>
+	<bean id="string02" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="hard core" />
+		<property name = "spamlist"><ref bean = "spamEn" /></property>
+	</bean>
+	<bean id="string03" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="viagra" />
+		<property name = "spamlist"><ref bean = "spamEn" /></property>
+	</bean>
+	<bean id="string04" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="cialis" />
+		<property name = "spamlist"><ref bean = "spamEn" /></property>
+	</bean>
+	<bean id="string05" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="nigeria" />
+		<property name = "spamlist"><ref bean = "spamEn" /></property>
+	</bean>
+	<bean id="string06" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="you´ve won" />
+		<property name = "spamlist"><ref bean = "spamEn" /></property>
+	</bean>
+	<bean id="string07" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="million dollar" />
+		<property name = "spamlist"><ref bean = "spamEn" /></property>
+	</bean>
+	
+	<!-- ES SpamwordList -->
 
 	<bean id="spamEs" class="acme.entities.spamlist.Spamlist">
 		<property name="spamwordslist">
 			<list>
-				<bean id="string01" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="sexo" />
-				</bean>
-				<bean id="string02" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="explicito" />
-				</bean>
-				<bean id="string03" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="viagra" />
-				</bean>
-				<bean id="string04" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="cialis" />
-				</bean>
-				<bean id="string05" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="nigeria" />
-				</bean>
-				<bean id="string06" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="has ganado" />
-				</bean>
-				<bean id="string07" class="acme.entities.spamlist.Spamword">
-					<property name="spamword" value="millón de dolares" />
-				</bean>
+				<ref bean = "string08" />
+				<ref bean = "string09" />
+				<ref bean = "string10" />
+				<ref bean = "string11" />
+				<ref bean = "string12" />
+				<ref bean = "string13" />
+				<ref bean = "string14" />
 			</list>
 		</property>
 	</bean>
+	
+	<!-- Spamwords -->
+	
+	<bean id="string08" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="sexo" />
+		<property name = "spamlist"><ref bean = "spamEs" /></property>
+	</bean>
+	<bean id="string09" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="explicito" />
+		<property name = "spamlist"><ref bean = "spamEs" /></property>
+	</bean>
+	<bean id="string10" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="viagra" />
+		<property name = "spamlist"><ref bean = "spamEs" /></property>
+	</bean>
+	<bean id="string11" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="cialis" />
+		<property name = "spamlist"><ref bean = "spamEs" /></property>
+	</bean>
+	<bean id="string12" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="nigeria" />
+		<property name = "spamlist"><ref bean = "spamEs" /></property>
+	</bean>
+	<bean id="string13" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="has ganado" />
+		<property name = "spamlist"><ref bean = "spamEs" /></property>
+	</bean>
+	<bean id="string14" class="acme.entities.spamlist.Spamword">
+		<property name="spamword" value="millón de dolares" />
+		<property name = "spamlist"><ref bean = "spamEs" /></property>
+	</bean>
 
+	<!-- User Only Authenticated -->
+	
 	<bean name="authenticated01" class="acme.framework.entities.UserAccount">
 		<property name="username" value="user01" />
 		<property name="password" value="user01" />
