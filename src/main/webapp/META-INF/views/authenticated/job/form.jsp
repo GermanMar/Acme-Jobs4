@@ -37,6 +37,12 @@
 	    	<p><acme:message code="authenticated.job.percent"/>  ${duty.getPercent()}</p>
 	    </li>
 	</c:forEach>
+	
+	<acme:form-url code="authenticated.job.form.label.auditRecords" path="auditURL" placeholder="AuditRecords" readonly="true"/>
+	
+	<acme:form-submit
+	code="authenticated.job.form.button.auditRecords"
+	action="/authenticated/audit-record/list"/>
 		
 	<acme:form-return code="authenticated.job.form.button.return" />
 </acme:form>

@@ -3,6 +3,7 @@ package acme.features.authenticated.job;
 
 import java.util.Collection;
 
+import org.hibernate.validator.constraints.URL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -58,6 +59,11 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		Collection<Duty> duties = this.repository.findManyDutiesById(descriptor.getId());
 
 		model.setAttribute("duties", duties);
+
+		@URL
+		String auditURL = "/acme-jobs/authenticated/audit-record/list?id=" + entity.getId();
+
+		model.setAttribute("auditURL", auditURL);
 	}
 
 	@Override
