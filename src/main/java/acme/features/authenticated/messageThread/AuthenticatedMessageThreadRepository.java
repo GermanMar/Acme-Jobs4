@@ -4,11 +4,13 @@ package acme.features.authenticated.messageThread;
 import java.util.Collection;
 
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import acme.entities.message.Message;
 import acme.entities.messageThread.MessageThread;
 import acme.framework.repositories.AbstractRepository;
 
+@Repository
 public interface AuthenticatedMessageThreadRepository extends AbstractRepository {
 
 	@Query("select m from MessageThread m join m.users u where u.id = ?1")

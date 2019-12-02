@@ -20,6 +20,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.entities.application.Application;
+import acme.entities.auditRecord.AuditRecord;
 import acme.entities.descriptor.Descriptor;
 import acme.entities.roles.Employer;
 import acme.framework.datatypes.Money;
@@ -83,4 +84,9 @@ public class Job extends DomainEntity {
 	@Valid
 	@OneToMany(mappedBy = "job")
 	private Collection<Application>	application;
+
+	@NotNull
+	@Valid
+	@OneToMany(mappedBy = "job")
+	private Collection<AuditRecord>	auditRecord;
 }
