@@ -24,21 +24,21 @@ import lombok.Setter;
 @Setter
 public class MessageThread extends DomainEntity {
 
-	private static final long	serialVersionUID	= 1L;
+	private static final long			serialVersionUID	= 1L;
 
 	@NotBlank
-	String						title;
+	private String						title;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	Date						creationMoment;
+	private Date						creationMoment;
 
 	@ManyToMany
-	Collection<Authenticated>	users;
+	private Collection<Authenticated>	users;
 
 	@NotNull
 	@Valid
 	@OneToMany(mappedBy = "thread")
-	Collection<Message>			message;
+	private Collection<Message>			message;
 
 }
