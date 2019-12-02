@@ -1153,7 +1153,7 @@
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="card" value="5496675056390627" />
-		<property name="sponsor" ref="sponsor2Sponsor"/>
+		<property name="sponsor" ref="sponsor1Sponsor"></property>
 	</bean>
 
 	<bean id="banner06" class="acme.entities.commercial.Commercial">

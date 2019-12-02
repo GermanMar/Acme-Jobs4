@@ -2,6 +2,7 @@
 package acme.features.sponsor.commercial;
 
 import java.util.Collection;
+import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,9 +43,16 @@ public class SponsorCommercialListService implements AbstractListService<Sponsor
 
 		Collection<Commercial> res;
 		Principal principal;
-
 		principal = request.getPrincipal();
-		res = this.repository.findManyBySponsorId(principal.getActiveRoleId());
+
+		Sponsor s = this.repository.findSponsorById(principal.getActiveRoleId());
+
+		if (s.getCardCredit() != null) {
+			res = this.repository.findManyBySponsorId(principal.getActiveRoleId());
+
+		} else {
+			res = Collections.emptyList();
+		}
 
 		return res;
 	}
