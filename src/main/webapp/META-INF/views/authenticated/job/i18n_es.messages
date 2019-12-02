@@ -17,4 +17,5 @@ authenticated.job.title = Título:
 authenticated.job.description = Descripción:
 authenticated.job.percent = Porcentaje:
 
+authenticated.job.form.button.auditRecord = Registros de auditorías
 authenticated.job.form.button.return = Volver

@@ -23,5 +23,6 @@
 	<acme:form-url code="auditor.offer.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="auditor.offer.form.label.description" path="description"/>
 
+<acme:form-submit method="get" code="auditor.job.form.button.auditRecord"	action="/auditor/audit-record/list?id=${id}"/>
 	<acme:form-return code="auditor.offer.form.button.return" />
 </acme:form>

@@ -18,4 +18,5 @@ employer.job.title = Title:
 employer.job.description = Description:
 employer.job.percent = Percent:
 
+employer.job.form.button.auditRecord = Audit Records
 employer.job.form.button.return = Return

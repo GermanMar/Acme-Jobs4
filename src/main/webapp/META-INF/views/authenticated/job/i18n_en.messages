@@ -18,4 +18,5 @@ authenticated.job.title = Title:
 authenticated.job.description = Description:
 authenticated.job.percent = Percent:
 
+authenticated.job.form.button.auditRecord = Audit Records
 authenticated.job.form.button.return = Return

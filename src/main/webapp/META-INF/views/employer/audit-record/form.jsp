@@ -1,6 +1,5 @@
-
 <%--
-- list.jsp
+- form.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
 -
@@ -13,13 +12,14 @@
 
 <%@page language="java"%>
 
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:list>
-	<acme:list-column code="authenticated.audit-record.list.label.title" path="title" width="10%"/>
-	<acme:list-column code="authenticated.audit-record.list.label.status" path="status" width="20%"/>
-	<acme:list-column code="authenticated.audit-record.list.label.body" path="body" width="70%"/>
-</acme:list>
-<acme:menu-separator />
-<acme:form-return code="authenticated.job.form.button.return" />
+<acme:form readonly="false">
+	<acme:form-textbox code="employer.audit-record.form.label.title" path="title" />
+	<acme:form-textbox code="employer.audit-record.form.label.status" path="status" />
+	<acme:form-textbox code="employer.audit-record.form.label.body" path="body" />
+		
+	<acme:form-return code="employer.job.form.button.return" />
+</acme:form>

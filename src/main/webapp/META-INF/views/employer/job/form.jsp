@@ -36,6 +36,7 @@
 	    	<p><acme:message code="employer.job.percent"/>  ${duty.getPercent()}</p>
 		</li>
 	</c:forEach>
-
+	
+	<acme:form-submit method="get" code="employer.job.form.button.auditRecord" action="/employer/audit-record/list?id=${id}"/>
 	<acme:form-return code="employer.job.form.button.return" />
 </acme:form>
