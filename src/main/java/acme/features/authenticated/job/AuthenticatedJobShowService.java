@@ -59,9 +59,9 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 
 		model.setAttribute("duties", duties);
 
-		Integer jobId = entity.getId();
-
-		model.setAttribute("jobId", jobId);
+		//		Integer jobId = entity.getId();
+		//
+		//		model.setAttribute("jobId", jobId);
 	}
 
 	@Override

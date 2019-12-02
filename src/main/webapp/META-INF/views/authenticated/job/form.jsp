@@ -40,7 +40,7 @@
 	
 	<acme:form-submit method="get"
 	code="authenticated.job.form.button.auditRecord"
-	action="/authenticated/audit-record/list?id=${jobId}"/>
+	action="/authenticated/audit-record/list?id=${id}"/>
 		
 	<acme:form-return code="authenticated.job.form.button.return" />
 </acme:form>
