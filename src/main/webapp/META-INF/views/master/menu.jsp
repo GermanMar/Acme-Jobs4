@@ -88,6 +88,12 @@
 			<acme:menu-suboption code="master.menu.sponsor.commercial.list" action="/sponsor/commercial/list_mine"/>
 			<acme:menu-suboption code="master.menu.sponsor.noncommercial.list" action="/sponsor/non-commercial/list_mine"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.auditor.job.list-rec" action="/auditor/job/list_rec"/>
+			<acme:menu-suboption code="master.menu.auditor.job.list-nonrec" action="/auditor/job/list_nonrec"/>
+		</acme:menu-option>
 	</acme:menu-left>
 	
 

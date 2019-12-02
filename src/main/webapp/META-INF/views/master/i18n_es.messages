@@ -94,6 +94,13 @@ master.menu.sponsor.commercial.list = Banners Comerciales
 master.menu.sponsor.noncommercial.list = Banners no comerciales
 master.menu.sponsor = Patrocinador
 
+# master.menu.auditor ####################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.favourite-link = Link favorito
+master.menu.auditor.job.list-rec = Mis trabajos documentados
+master.menu.auditor.job.nonrec-list-nonrec = Trabajos no documentados por mi
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
