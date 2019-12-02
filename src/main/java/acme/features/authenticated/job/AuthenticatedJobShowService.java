@@ -58,10 +58,6 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		Collection<Duty> duties = this.repository.findManyDutiesById(descriptor.getId());
 
 		model.setAttribute("duties", duties);
-
-		//		Integer jobId = entity.getId();
-		//
-		//		model.setAttribute("jobId", jobId);
 	}
 
 	@Override
