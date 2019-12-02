@@ -8,6 +8,7 @@ import acme.entities.application.Application;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -22,7 +23,19 @@ public class EmployerApplicationsShowService implements AbstractShowService<Empl
 	@Override
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
-		return true;
+		boolean result;
+		Application application;
+		int appId;
+		Employer employer;
+		Principal principal;
+
+		appId = request.getModel().getInteger("id");
+		application = this.repository.findOneById(appId);
+		employer = application.getJob().getEmployer();
+		principal = request.getPrincipal();
+		result = application.isFinalMode() || !application.isFinalMode() && employer.getUserAccount().getId() == principal.getAccountId();
+
+		return result;
 	}
 
 	@Override

@@ -51,6 +51,8 @@ public class Application extends DomainEntity {
 	@NotBlank
 	private String				qualification;
 
+	private boolean				finalMode;
+
 	//Relationships
 	@NotNull
 	@Valid

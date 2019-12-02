@@ -27,6 +27,7 @@
        `id` integer not null,
         `version` integer not null,
         `creation_moment` datetime(6),
+        `final_mode` bit not null,
         `qualification` varchar(255),
         `ref` varchar(255),
         `skill` varchar(255),
