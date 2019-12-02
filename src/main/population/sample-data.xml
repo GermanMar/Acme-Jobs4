@@ -154,7 +154,103 @@
 			</list>
 		</property>
 		</bean>
+		
+		<bean name="msgThread2" class = "acme.entities.messageThread.MessageThread">
+		<property name="title" value="Msg Thread 2"/>
+		<property name="creationMoment" value="2018/12/11 23:40"/>
+		<property name="users">
+			<list>
+			<ref bean="employer1Authenticated"/>
+			<ref bean="employer2Authenticated"/>
+			<ref bean="employer3Authenticated"/>
+			<ref bean="worker1Authenticated"/>
+			<ref bean="worker2Authenticated"/>
+			<ref bean="worker3Authenticated"/>
+			</list>
+		</property>
+		<property name="message">
+			<list>
+			<ref bean="msg1"/>
+			<ref bean="msg2"/>
+			<ref bean="msg6"/>
+			<ref bean="msg8"/>
+			<ref bean="msg9"/>
+			<ref bean="msg10"/>
+			</list>
+		</property>
+		</bean>
+		
+		<bean name="msgThread3" class = "acme.entities.messageThread.MessageThread">
+		<property name="title" value="Msg Thread 3"/>
+		<property name="creationMoment" value="2018/12/11 23:50"/>
+		<property name="users">
+			<list>
+			<ref bean="employer1Authenticated"/>
+			<ref bean="employer2Authenticated"/>
+			<ref bean="worker1Authenticated"/>
+			<ref bean="worker2Authenticated"/>
+			<ref bean="worker3Authenticated"/>
+			</list>
+		</property>
+		<property name="message">
+			<list>
+			<ref bean="msg3"/>
+			<ref bean="msg4"/>
+			<ref bean="msg6"/>
+			<ref bean="msg8"/>
+			<ref bean="msg9"/>
+			</list>
+		</property>
+		</bean>
+		
+		<bean name="msgThread4" class = "acme.entities.messageThread.MessageThread">
+		<property name="title" value="Msg Thread 4"/>
+		<property name="creationMoment" value="2018/12/11 22:40"/>
+		<property name="users">
+			<list>
+			<ref bean="employer2Authenticated"/>
+			<ref bean="employer3Authenticated"/>
+			<ref bean="worker1Authenticated"/>
+			<ref bean="worker2Authenticated"/>
+			<ref bean="worker3Authenticated"/>
+			</list>
+		</property>
+		<property name="message">
+			<list>
+			<ref bean="msg1"/>
+			<ref bean="msg3"/>
+			<ref bean="msg5"/>
+			<ref bean="msg7"/>
+			<ref bean="msg10"/>
+			</list>
+		</property>
+		</bean>
 	
+		<bean name="msgThread5" class = "acme.entities.messageThread.MessageThread">
+		<property name="title" value="Msg Thread 5"/>
+		<property name="creationMoment" value="2018/12/11 21:30"/>
+		<property name="users">
+			<list>
+			<ref bean="employer1Authenticated"/>
+			<ref bean="employer2Authenticated"/>
+			<ref bean="employer3Authenticated"/>
+			<ref bean="worker1Authenticated"/>
+			<ref bean="worker2Authenticated"/>
+			<ref bean="worker3Authenticated"/>
+			</list>
+		</property>
+		<property name="message">
+			<list>
+			<ref bean="msg1"/>
+			<ref bean="msg4"/>
+			<ref bean="msg5"/>
+			<ref bean="msg6"/>
+			<ref bean="msg8"/>
+			<ref bean="msg9"/>
+			</list>
+		</property>
+		</bean>
+		
 	<!-- Messages -->
 	
 	<bean name="msg1" class = "acme.entities.message.Message">
@@ -202,6 +298,38 @@
 		<property name="creationMoment" value="2019/11/11 23:59"/>
 		<property name="tags" value="sixth-msg-ever"/>
 		<property name="body" value="This is the sixth msg"/>
+		<property name="thread"><ref bean="msgThread1"/></property>
+	</bean>
+	
+	<bean name="msg7" class = "acme.entities.message.Message">
+		<property name="title" value="7th Message"/>
+		<property name="creationMoment" value="2019/11/11 23:59"/>
+		<property name="tags" value="seventh-msg-ever"/>
+		<property name="body" value="This is the seventh msg"/>
+		<property name="thread"><ref bean="msgThread1"/></property>
+	</bean>
+	
+	<bean name="msg8" class = "acme.entities.message.Message">
+		<property name="title" value="8th Message"/>
+		<property name="creationMoment" value="2019/11/11 23:59"/>
+		<property name="tags" value="eigth-msg-ever"/>
+		<property name="body" value="This is the eigth msg"/>
+		<property name="thread"><ref bean="msgThread1"/></property>
+	</bean>
+	
+	<bean name="msg9" class = "acme.entities.message.Message">
+		<property name="title" value="9th Message"/>
+		<property name="creationMoment" value="2019/11/11 23:59"/>
+		<property name="tags" value="nineth-msg-ever"/>
+		<property name="body" value="This is the nineth msg"/>
+		<property name="thread"><ref bean="msgThread1"/></property>
+	</bean>
+	
+	<bean name="msg10" class = "acme.entities.message.Message">
+		<property name="title" value="10th Message"/>
+		<property name="creationMoment" value="2019/11/11 23:59"/>
+		<property name="tags" value="tenth-msg-ever"/>
+		<property name="body" value="This is the tenth msg"/>
 		<property name="thread"><ref bean="msgThread1"/></property>
 	</bean>
 	
