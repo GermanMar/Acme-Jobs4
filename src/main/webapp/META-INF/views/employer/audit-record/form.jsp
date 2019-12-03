@@ -19,6 +19,7 @@
 <acme:form readonly="false">
 	<acme:form-textbox code="employer.audit-record.form.label.title" path="title" />
 	<acme:form-textbox code="employer.audit-record.form.label.status" path="status" />
+	<acme:form-textbox code="employer.audit-record.form.label.creationMoment" path="creationMoment" />
 	<acme:form-textbox code="employer.audit-record.form.label.body" path="body" />
 		
 	<acme:form-return code="employer.job.form.button.return" />

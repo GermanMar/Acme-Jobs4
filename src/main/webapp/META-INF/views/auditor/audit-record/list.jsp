@@ -19,6 +19,7 @@
 <acme:list>
 	<acme:list-column code="auditor.audit-record.list.label.title" path="title" width="10%"/>
 	<acme:list-column code="auditor.audit-record.list.label.status" path="status" width="20%"/>
+	<acme:list-column code="auditor.audit-record.list.label.creationMoment" path="creationMoment" width="70%"/>
 	<acme:list-column code="auditor.audit-record.list.label.body" path="body" width="70%"/>
 </acme:list>
 <acme:menu-separator />
