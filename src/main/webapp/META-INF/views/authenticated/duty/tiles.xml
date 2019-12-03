@@ -22,7 +22,7 @@
 		<put-attribute name="body" type="template" value="../authenticated/duty/list.jsp" />
 	</definition>
 	
-	<definition name="auditor/duty/form" extends="master">
+	<definition name="authenticated/duty/form" extends="master">
 		<put-attribute name="body" type="template" value="../authenticated/duty/form.jsp" />
 	</definition>
 	
