@@ -17,7 +17,10 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
+	<acme:list-column code="authenticated.duty.list.label.reference" path="reference" width="10%"/>
 	<acme:list-column code="authenticated.duty.list.label.title" path="title" width="10%"/>
 	<acme:list-column code="authenticated.duty.list.label.description" path="description" width="80%"/>
 	<acme:list-column code="authenticated.duty.list.label.percent" path="percent" width="10%"/>
 </acme:list>
+<acme:menu-separator />
+<acme:form-return code="authenticated.duty.form.button.return" />

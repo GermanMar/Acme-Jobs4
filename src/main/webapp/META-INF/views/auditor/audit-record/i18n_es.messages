@@ -8,4 +8,4 @@ auditor.audit-record.form.label.status = Estado
 auditor.audit-record.form.label.body = Cuerpo
 auditor.audit-record.form.label.creationMoment = Momento de Creación
 
-auditor.job.form.button.return = Volver
+auditor.audit-record.form.button.return = Volver

@@ -34,6 +34,7 @@ public class EmployerDutyListService implements AbstractListService<Authenticate
 
 		request.unbind(entity, model, "title", "description");
 		model.setAttribute("percent", entity.getPercent());
+		model.setAttribute("reference", request.getServletRequest().getParameter("ref"));
 	}
 
 	@Override

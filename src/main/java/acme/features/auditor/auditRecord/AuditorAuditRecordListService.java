@@ -33,6 +33,7 @@ public class AuditorAuditRecordListService implements AbstractListService<Audito
 		assert model != null;
 
 		request.unbind(entity, model, "title", "creationMoment", "status", "body");
+		model.setAttribute("reference", request.getServletRequest().getParameter("ref"));
 	}
 
 	@Override

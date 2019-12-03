@@ -33,6 +33,7 @@ public class EmployerAuditRecordListService implements AbstractListService<Emplo
 		assert model != null;
 
 		request.unbind(entity, model, "title", "creationMoment", "status", "body");
+		model.setAttribute("reference", request.getServletRequest().getParameter("ref"));
 	}
 
 	@Override

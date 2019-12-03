@@ -28,7 +28,7 @@
 	<acme:message code="employer.job.descriptor"/>
 	<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor" path="descriptor" />
 	
-	<acme:form-submit method="get" code="employer.job.form.button.duties" action="/employer/duty/list?id=${descriptorId}"/>
-	<acme:form-submit method="get" code="employer.job.form.button.auditRecord" action="/employer/audit-record/list?id=${id}"/>
+	<acme:form-submit method="get" code="employer.job.form.button.duties" action="/employer/duty/list?id=${descriptorId}&ref=${reference}"/>
+	<acme:form-submit method="get" code="employer.job.form.button.auditRecord" action="/employer/audit-record/list?id=${id}&ref=${reference}"/>
 	<acme:form-return code="employer.job.form.button.return" />
 </acme:form>
