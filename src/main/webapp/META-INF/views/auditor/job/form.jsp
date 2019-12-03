@@ -16,13 +16,15 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="false">
-	<acme:form-textbox code="auditor.offer.form.label.reference" path="reference" />
-	<acme:form-textbox code="auditor.offer.form.label.title" path="title" />
-	<acme:form-moment code="auditor.offer.form.label.deadline" path="deadline"/>
-	<acme:form-money code="auditor.offer.form.label.salary" path="salary"/>
-	<acme:form-url code="auditor.offer.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-textarea code="auditor.offer.form.label.description" path="description"/>
+	<acme:form-textbox code="auditor.job.form.label.reference" path="reference" />
+	<acme:form-textbox code="auditor.job.form.label.title" path="title" />
+	<acme:form-moment code="auditor.job.form.label.deadline" path="deadline"/>
+	<acme:form-money code="auditor.job.form.label.salary" path="salary"/>
+	<acme:form-url code="auditor.job.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-textarea code="auditor.job.form.label.description" path="description"/>
 
-<acme:form-submit method="get" code="auditor.job.form.button.auditRecord"	action="/auditor/audit-record/list?id=${id}"/>
-	<acme:form-return code="auditor.offer.form.button.return" />
+	<acme:form-submit method="get" code="auditor.job.form.button.duties" action="/auditor/duty/list?id=${descriptorId}"/>
+	<acme:form-submit method="get" code="auditor.job.form.button.auditRecord" action="/auditor/audit-record/list?id=${id}"/>
+	
+	<acme:form-return code="auditor.job.form.button.return" />
 </acme:form>

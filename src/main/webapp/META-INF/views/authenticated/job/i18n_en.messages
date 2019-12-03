@@ -13,10 +13,6 @@ authenticated.job.form.label.description = Description
 authenticated.job.descriptor = <h4>Descriptor:</h4>
 authenticated.job.form.label.descriptor = Description
 
-authenticated.job.duties = <h4>Duties:</h4>
-authenticated.job.title = Title:
-authenticated.job.description = Description:
-authenticated.job.percent = Percent:
-
+authenticated.job.form.button.duties = Duties
 authenticated.job.form.button.auditRecord = Audit Records
 authenticated.job.form.button.return = Return
