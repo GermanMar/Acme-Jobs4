@@ -820,7 +820,7 @@
 		<property name="salary" value="€ 20,000.00"/>
 		<property name="description" value="Hola que tal"/>
 		<property name="moreInfo" value="https://www.example.com"/>
-		<property name="finalMode" value="true"/>
+		<property name="finalMode" value="false"/>
 		<property name="application">
 			<list>
 			<ref bean="application3"/>
@@ -845,7 +845,7 @@
 		<property name="salary" value="€ 15,000.00"/>
 		<property name="description" value="Hola que tal"/>
 		<property name="moreInfo" value="https://www.example.com"/>
-		<property name="finalMode" value="true"/>
+		<property name="finalMode" value="false"/>
 		<property name="descriptor" ref="descriptor2" />
 		<property name="employer" ref="employer1Employer"/>
 		<property name="application">
@@ -870,7 +870,7 @@
 		<property name="salary" value="€ 20,000.00"/>
 		<property name="description" value="Hola que tal"/>
 		<property name="moreInfo" value="https://www.example.com"/>
-		<property name="finalMode" value="true"/>
+		<property name="finalMode" value="false"/>
 		<property name="descriptor" ref="descriptor3" />
 		<property name="employer" ref="employer3Employer"/>
 		<property name="application">
@@ -1238,6 +1238,7 @@
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>
+		<property name="finalMode" value="false"/>
 	</bean>
 
 	<bean id="banner02" class="acme.entities.nonCommercial.NonCommercial">
@@ -1245,6 +1246,7 @@
 		<property name="slogan" value="Never too late boys." />
 		<property name="url" value="https://www.google.es" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>
+		<property name="finalMode" value="false"/>
 	</bean>
 
 	<bean id="banner03" class="acme.entities.nonCommercial.NonCommercial">
@@ -1253,6 +1255,7 @@
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="jingle" value="https://www.youtube.com/watch?v=VfLf7A_-1Vw" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>
+		<property name="finalMode" value="false"/>
 	</bean>
 
 	<bean id="banner04" class="acme.entities.commercial.Commercial">
@@ -1261,6 +1264,7 @@
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="card" value="5541147884694773" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>
+		<property name="finalMode" value="false"/>
 		
 	</bean>
 
@@ -1269,7 +1273,8 @@
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="card" value="5496675056390627" />
-		<property name="sponsor" ref="sponsor1Sponsor"></property>
+		<property name="sponsor" ref="sponsor1Sponsor"/>
+		<property name="finalMode" value="false"/>
 	</bean>
 
 	<bean id="banner06" class="acme.entities.commercial.Commercial">
@@ -1278,6 +1283,7 @@
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="card" value="5422301936093054" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>	
+		<property name="finalMode" value="false"/>
 	</bean>
 
 	<!-- Challenge -->
