@@ -10,4 +10,4 @@ authenticated.audit-record.form.label.body = Body
 authenticated.audit-record.form.label.creationMoment = Creation Moment
 
 
-authenticated.job.form.button.return = Return
+authenticated.audit-record.form.button.return = Return

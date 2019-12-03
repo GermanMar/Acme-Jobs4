@@ -11,4 +11,5 @@ authenticated.message.creationMoment = Creation Moment:
 authenticated.message.tags = Tags:
 authenticated.message.body = Body:
 
+authenticated.message-thread.list.button.messages = Messages
 authenticated.message-thread.form.button.return = Return
