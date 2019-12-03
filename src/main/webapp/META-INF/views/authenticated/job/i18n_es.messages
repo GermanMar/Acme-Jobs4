@@ -12,9 +12,6 @@ authenticated.job.form.label.moreInfo = Más información
 authenticated.job.descriptor = <h4>Descriptor:</h4>
 authenticated.job.form.label.description = Descripción
 
-authenticated.job.duties = <h4>Tareas:</h4>
-authenticated.job.title = Título:
-authenticated.job.description = Descripción:
-authenticated.job.percent = Porcentaje:
-
+authenticated.job.form.button.duties = Tareas
+authenticated.job.form.button.auditRecord = Registros de auditorías
 authenticated.job.form.button.return = Volver

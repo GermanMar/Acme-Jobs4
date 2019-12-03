@@ -1,0 +1,9 @@
+auditor.audit-record.list.label.title = Título
+auditor.audit-record.list.label.status = Estado
+auditor.audit-record.list.label.body = Cuerpo
+
+auditor.audit-record.form.label.title = Título
+auditor.audit-record.form.label.status = Estado
+auditor.audit-record.form.label.body = Cuerpo
+
+auditor.job.form.button.return = Volver

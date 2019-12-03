@@ -1,0 +1,9 @@
+auditor.audit-record.list.label.title = Title
+auditor.audit-record.list.label.status = Status
+auditor.audit-record.list.label.body = Body
+
+auditor.audit-record.form.label.title = Title
+auditor.audit-record.form.label.status = Status
+auditor.audit-record.form.label.body = Body
+
+auditor.job.form.button.return = Return

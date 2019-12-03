@@ -1,0 +1,9 @@
+authenticated.audit-record.list.label.title = Title
+authenticated.audit-record.list.label.status = Status
+authenticated.audit-record.list.label.body = Body
+
+authenticated.audit-record.form.label.title = Title
+authenticated.audit-record.form.label.status = Status
+authenticated.audit-record.form.label.body = Body
+
+authenticated.job.form.button.return = Return

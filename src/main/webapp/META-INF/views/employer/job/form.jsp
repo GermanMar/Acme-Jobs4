@@ -27,15 +27,8 @@
 	
 	<acme:message code="employer.job.descriptor"/>
 	<acme:form-textarea readonly="true" code="employer.job.form.label.descriptor" path="descriptor" />
-
-	<acme:message code="employer.job.duties"/>
-	<c:forEach items="${duties}" var="duty">
-		<li><Strong>Duty:</Strong>
-			<p><acme:message code="employer.job.title"/>  ${duty.getTitle()}</p>
-	    	<p><acme:message code="employer.job.description"/>  ${duty.getDescription()}</p>
-	    	<p><acme:message code="employer.job.percent"/>  ${duty.getPercent()}</p>
-		</li>
-	</c:forEach>
-
+	
+	<acme:form-submit method="get" code="employer.job.form.button.duties" action="/employer/duty/list?id=${descriptorId}"/>
+	<acme:form-submit method="get" code="employer.job.form.button.auditRecord" action="/employer/audit-record/list?id=${id}"/>
 	<acme:form-return code="employer.job.form.button.return" />
 </acme:form>

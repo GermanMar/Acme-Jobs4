@@ -28,15 +28,8 @@
 	<acme:message code="authenticated.job.descriptor"/>
 	<acme:form-textarea readonly="true" code="authenticated.job.form.label.descriptor" path="descriptor"/>
 	
-	<acme:message code="authenticated.job.duties"/>
-	<c:forEach items="${duties}" var="duty">
-	    <li>
-	    	<Strong>Duty:</Strong>
-	    	<p><acme:message code="authenticated.job.title"/>  ${duty.getTitle()}</p>
-	    	<p><acme:message code="authenticated.job.description"/>  ${duty.getDescription()}</p>
-	    	<p><acme:message code="authenticated.job.percent"/>  ${duty.getPercent()}</p>
-	    </li>
-	</c:forEach>
+	<acme:form-submit method="get" code="authenticated.job.form.button.duties" action="/authenticated/duty/list?id=${descriptorId}"/>
+	<acme:form-submit method="get" code="authenticated.job.form.button.auditRecord" action="/authenticated/audit-record/list?id=${id}"/>
 		
 	<acme:form-return code="authenticated.job.form.button.return" />
 </acme:form>
