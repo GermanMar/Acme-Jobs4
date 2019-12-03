@@ -1,5 +1,6 @@
+
 <%--
-- form.jsp
+- list.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
 -
@@ -12,14 +13,14 @@
 
 <%@page language="java"%>
 
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
-	<acme:form-textbox code="authenticated.message-thread.form.label.title" path="title" />
-	<acme:form-moment code="authenticated.message-thread.form.label.creationMoment" path="creationMoment"/>
-	
-	<acme:form-submit method="get" code="authenticated.message-thread.list.button.messages" action="/authenticated/message/list?id=${id}"/>
-	<acme:form-return code="authenticated.message-thread.form.button.return" />
-</acme:form>
+<acme:list>
+	<acme:list-column code="authenticated.message.list.label.title" path="title" width="10%"/>
+	<acme:list-column code="authenticated.message.list.label.creationMoment" path="creationMoment" width="20%"/>
+	<acme:list-column code="authenticated.message.list.label.tags" path="tags" width="20%"/>
+	<acme:list-column code="authenticated.message.list.label.body" path="body" width="50%"/>
+</acme:list>
+<acme:menu-separator/>
+<acme:form-return code="authenticated.message.form.button.return" />

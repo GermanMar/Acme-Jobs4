@@ -22,4 +22,4 @@
 	<acme:list-column code="authenticated.audit-record.list.label.body" path="body" width="70%"/>
 </acme:list>
 <acme:menu-separator />
-<acme:form-return code="authenticated.job.form.button.return" />
+<acme:form-return code="authenticated.audit-record.form.button.return" />

@@ -11,6 +11,7 @@ import acme.entities.messageThread.MessageThread;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -32,6 +33,12 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+
+		Principal principal = request.getPrincipal();
+
+		Integer id = principal.getActiveRoleId();
+
+		model.setAttribute("id", id);
 
 		request.unbind(entity, model, "title", "creationMoment", "message");
 

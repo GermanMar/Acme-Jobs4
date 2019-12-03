@@ -6,4 +6,4 @@ authenticated.audit-record.form.label.title = Title
 authenticated.audit-record.form.label.status = Status
 authenticated.audit-record.form.label.body = Body
 
-authenticated.job.form.button.return = Return
+authenticated.audit-record.form.button.return = Return
