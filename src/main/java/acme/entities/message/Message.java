@@ -23,17 +23,17 @@ public class Message extends DomainEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
-	String						title;
+	private String				title;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	Date						creationMoment;
+	private Date				creationMoment;
 
-	String						tags;
+	private String				tags;
 	@NotBlank
-	String						body;
+	private String				body;
 
 	@ManyToOne(optional = false)
-	MessageThread				thread;
+	private MessageThread		thread;
 
 }
