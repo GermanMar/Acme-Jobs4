@@ -8,6 +8,7 @@ import acme.entities.commercial.Commercial;
 import acme.entities.roles.Sponsor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -21,19 +22,19 @@ public class SponsorCommercialShowService implements AbstractShowService<Sponsor
 	public boolean authorise(final Request<Commercial> request) {
 		assert request != null;
 
-		//		boolean result;
-		//		Commercial commercial;
-		//		int commercialId;
-		//		Sponsor sponsor;
-		//		Principal principal;
-		//
-		//		commercialId = request.getModel().getInteger("id");
-		//		commercial = this.repository.findOneCommercialBannerById(commercialId);
-		//		sponsor = commercial.getSponsor();
-		//		principal = request.getPrincipal();
-		//		result = sponsor.getUserAccount().getId() == principal.getActiveRoleId();
+		boolean result;
+		Commercial banner;
+		int appId;
+		Sponsor sponsor;
+		Principal principal;
 
-		return true;
+		appId = request.getModel().getInteger("id");
+		banner = this.repository.findOneCommercialBannerById(appId);
+		sponsor = banner.getSponsor();
+		principal = request.getPrincipal();
+		result = banner.isFinalMode() || !banner.isFinalMode() && sponsor.getUserAccount().getId() == principal.getAccountId();
+
+		return result;
 	}
 
 	@Override
