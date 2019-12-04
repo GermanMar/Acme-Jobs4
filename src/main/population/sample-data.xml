@@ -1288,7 +1288,7 @@
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>
-		<property name="finalMode" value="false"/>
+		<!-- <property name="finalMode" value="false"/> -->
 	</bean>
 
 	<bean id="banner02" class="acme.entities.nonCommercial.NonCommercial">
@@ -1296,8 +1296,8 @@
 		<property name="slogan" value="Never too late boys." />
 		<property name="url" value="https://www.google.es" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>
-		<property name="finalMode" value="false"/>
-	</bean>
+<!-- 		<property name="finalMode" value="false"/>
+ -->	</bean>
 
 	<bean id="banner03" class="acme.entities.nonCommercial.NonCommercial">
 		<property name="banner" value="https://i.pinimg.com/474x/0d/02/9d/0d029d10452ecea33f9409e91c1ea64a.jpg" />
@@ -1305,16 +1305,19 @@
 		<property name="url" value="https://www.pinterest.com" />
 		<property name="jingle" value="https://www.youtube.com/watch?v=VfLf7A_-1Vw" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>
-		<property name="finalMode" value="false"/>
-	</bean>
+<!-- 		<property name="finalMode" value="false"/>
+ -->	</bean>
 
 	<bean id="banner04" class="acme.entities.commercial.Commercial">
 		<property name="banner" value="https://i.pinimg.com/474x/0d/02/9d/0d029d10452ecea33f9409e91c1ea64a.jpg" />
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
+		<property name="ownerName" value="Juan Palomo" />
+		<property name="expireDate" value="08/23" />
+		<property name="ccv" value="874" />
 		<property name="card" value="5541147884694773" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>
-		<property name="finalMode" value="false"/>
+<!-- 		<property name="finalMode" value="false"/> -->
 		
 	</bean>
 
@@ -1322,18 +1325,24 @@
 		<property name="banner" value="https://i.pinimg.com/474x/0d/02/9d/0d029d10452ecea33f9409e91c1ea64a.jpg" />
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
+		<property name="ownerName" value="Cecilio Águila" />
+		<property name="expireDate" value="09/22" />
+		<property name="ccv" value="573" />
 		<property name="card" value="5496675056390627" />
 		<property name="sponsor" ref="sponsor1Sponsor"/>
-		<property name="finalMode" value="false"/>
+<!-- 		<property name="finalMode" value="false"/> -->
 	</bean>
 
 	<bean id="banner06" class="acme.entities.commercial.Commercial">
 		<property name="banner" value="https://i.pinimg.com/474x/0d/02/9d/0d029d10452ecea33f9409e91c1ea64a.jpg" />
 		<property name="slogan" value="Life is about small things." />
 		<property name="url" value="https://www.pinterest.com" />
+		<property name="ownerName" value="María Lacasa" />
+		<property name="expireDate" value="10/21" />
+		<property name="ccv" value="402" />
 		<property name="card" value="5422301936093054" />
 		<property name="sponsor" ref="sponsor2Sponsor"/>	
-		<property name="finalMode" value="false"/>
+		<!-- <property name="finalMode" value="false"/> -->
 	</bean>
 
 	<!-- Challenge -->
