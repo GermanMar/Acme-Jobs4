@@ -6,6 +6,9 @@ sponsor.commercial.list.label.card = card
 sponsor.commercial.form.label.banner = Banner
 sponsor.commercial.form.label.slogan = Slogan
 sponsor.commercial.form.label.url = Url
+sponsor.commercial.form.label.ownerName = Owner Name
+sponsor.commercial.form.label.expireDate = Expire Date
+sponsor.commercial.form.label.ccv = CCV
 sponsor.commercial.form.label.card = Credit Card
 
 sponsor.commercial.form.button.update = Update

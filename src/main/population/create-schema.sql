@@ -98,7 +98,9 @@
         `version` integer not null,
         `banner` varchar(255),
         `card` varchar(255),
-        `final_mode` bit not null,
+        `ccv` integer,
+        `expire_date` varchar(255),
+        `owner_name` varchar(255),
         `slogan` varchar(255),
         `url` varchar(255),
         `sponsor_id` integer not null,
@@ -210,7 +212,6 @@
        `id` integer not null,
         `version` integer not null,
         `banner` varchar(255),
-        `final_mode` bit not null,
         `jingle` varchar(255),
         `slogan` varchar(255),
         `url` varchar(255),
@@ -305,6 +306,9 @@
 
     alter table `application` 
        add constraint UK_sqi7i8b9wxmiu57ftr95ssexh unique (`ref`);
+
+    alter table `commercial` 
+       add constraint UK_anxnx0l37gwx03ticl1nttf1n unique (`ccv`);
 
     alter table `descriptor` 
        add constraint UK_4iw18njo4d0q8gvnhe04vmctw unique (`job_id`);

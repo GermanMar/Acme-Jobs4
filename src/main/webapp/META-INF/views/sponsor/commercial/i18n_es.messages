@@ -6,6 +6,9 @@ sponsor.commercial.list.label.card = card
 sponsor.commercial.form.label.banner = Pancarta
 sponsor.commercial.form.label.slogan = Slogan
 sponsor.commercial.form.label.url = Url
+sponsor.commercial.form.label.ownerName = Nombre de titular
+sponsor.commercial.form.label.expireDate = Fecha de vencimiento
+sponsor.commercial.form.label.ccv = CCV
 sponsor.commercial.form.label.card = Tarjeta de Crédito
 
 sponsor.commercial.form.button.update = Actualizar

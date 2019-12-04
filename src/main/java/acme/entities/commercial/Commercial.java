@@ -1,6 +1,7 @@
 
 package acme.entities.commercial;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
@@ -35,6 +36,16 @@ public class Commercial extends DomainEntity {
 	@NotBlank
 	@URL
 	private String				url;
+
+	@NotBlank
+	private String				ownerName;
+
+	@NotBlank
+	private String				expireDate;
+
+	@NotNull
+	@Column(unique = true)
+	private Integer				ccv;
 
 	@NotBlank
 	@CreditCardNumber
