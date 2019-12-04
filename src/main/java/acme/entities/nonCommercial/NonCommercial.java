@@ -38,8 +38,6 @@ public class NonCommercial extends DomainEntity {
 	@URL
 	private String				jingle;
 
-	private boolean				finalMode;
-
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)

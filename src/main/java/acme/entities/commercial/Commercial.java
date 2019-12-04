@@ -40,8 +40,6 @@ public class Commercial extends DomainEntity {
 	@CreditCardNumber
 	private String				card;
 
-	private boolean				finalMode;
-
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)

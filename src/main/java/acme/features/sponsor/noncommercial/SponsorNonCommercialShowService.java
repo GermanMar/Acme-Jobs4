@@ -32,7 +32,7 @@ public class SponsorNonCommercialShowService implements AbstractShowService<Spon
 		banner = this.repository.findOneNonCommercialBannerById(appId);
 		sponsor = banner.getSponsor();
 		principal = request.getPrincipal();
-		result = banner.isFinalMode() || !banner.isFinalMode() && sponsor.getUserAccount().getId() == principal.getAccountId();
+		result = sponsor.getUserAccount().getId() == principal.getAccountId();
 
 		return result;
 	}
